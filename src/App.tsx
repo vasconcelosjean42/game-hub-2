@@ -4,6 +4,7 @@ import { Button } from "./components/ui/button";
 import "./App.css";
 import { Separator } from "@/components/ui/separator";
 import { IoSearchOutline } from "react-icons/io5";
+import { IoCopyOutline } from "react-icons/io5";
 import florDePapelLogo from "./assets/flor-de-papel-logo-transparente-03.png";
 import colaBastaoHomemAranha from "./assets/produtos/cola-bastao-homem-aranha.webp";
 import lapisStitchAzul from "./assets/produtos/lapis-stitch-azul.webp";
@@ -192,7 +193,7 @@ function App() {
           <div className="flex items-center justify-center">
             {isCopied ? (
               <Button
-                className="bg-green-700 w-36 disabled:opacity-100"
+                className="w-36 bg-green-700 disabled:opacity-100"
                 onClick={() => handleCopyCatalog()}
                 disabled
               >
@@ -203,6 +204,11 @@ function App() {
                 Copiar catálogo
               </Button>
             )}
+          </div>
+        </div>
+        <div className="absolute">
+          <div className="w-16 h-16 bg-green-700 rounded-full flex justify-center items-center">
+            <IoCopyOutline className="text-slate-100 font-extrabold text-xl" />
           </div>
         </div>
       </div>

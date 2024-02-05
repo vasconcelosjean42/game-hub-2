@@ -35,13 +35,14 @@ const Product = ({ product, handleAddProduct, handleRemoveProduct }: Props) => {
             onClick={() => setIsDisplay(true)}
           >
             <img
-              className="w-32 h-32 object-cover rounded-sm"
+              className="w-48 h-48 object-cover rounded-xl"
               src={product.image}
             />
           </CardContent>
         </DialogTrigger>
         <CardFooter className="flex items-center justify-center">
           <Button
+            className="w-48"
             onClick={() => {
               setIsAdd((prevState) => !prevState);
               isAdd
