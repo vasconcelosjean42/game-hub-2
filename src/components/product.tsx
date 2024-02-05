@@ -2,12 +2,15 @@ import { ProductProps } from "@/App";
 import {
   Card,
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "./ui/card";
 import { Button } from "./ui/button";
 import { useState } from "react";
+import ProductDialog from "./productDialog";
+import { Dialog, DialogTrigger } from "@radix-ui/react-dialog";
 
 interface Props {
   product: ProductProps;
@@ -17,20 +20,27 @@ interface Props {
 
 const Product = ({ product, handleAddProduct, handleRemoveProduct }: Props) => {
   const [isAdd, setIsAdd] = useState<boolean>(false);
+  const [isDisplay, setIsDisplay] = useState(false);
 
   return (
-    <div>
+    <Dialog>
       <Card className={`inline-block m-4 ${isAdd && "border-green-500"}`}>
         <CardHeader>
           <CardTitle>{product.name}</CardTitle>
+          <CardDescription>R$ {product.price.toFixed(2)}</CardDescription>
         </CardHeader>
-        <CardContent className="flex justify-center">
-          <img
-            className="w-32 h-32 object-cover"
-            src="https://picsum.photos/id/237/200/300"
-          />
-        </CardContent>
-        <CardFooter>
+        <DialogTrigger asChild>
+          <CardContent
+            className="flex justify-center"
+            onClick={() => setIsDisplay(true)}
+          >
+            <img
+              className="w-32 h-32 object-cover rounded-sm"
+              src={product.image}
+            />
+          </CardContent>
+        </DialogTrigger>
+        <CardFooter className="flex items-center justify-center">
           <Button
             onClick={() => {
               setIsAdd((prevState) => !prevState);
@@ -45,7 +55,8 @@ const Product = ({ product, handleAddProduct, handleRemoveProduct }: Props) => {
           </Button>
         </CardFooter>
       </Card>
-    </div>
+      {isDisplay && <ProductDialog product={product} isDisplay={isDisplay} />}
+    </Dialog>
   );
 };
 
