@@ -4,7 +4,6 @@ import { Button } from "./components/ui/button";
 import "./App.css";
 import { Separator } from "@/components/ui/separator";
 import { IoSearchOutline } from "react-icons/io5";
-import { IoCopyOutline } from "react-icons/io5";
 import florDePapelLogo from "./assets/flor-de-papel-logo-transparente-03.png";
 import colaBastaoHomemAranha from "./assets/produtos/cola-bastao-homem-aranha.webp";
 import lapisStitchAzul from "./assets/produtos/lapis-stitch-azul.webp";
@@ -16,6 +15,7 @@ import postitAmararelo100 from "./assets/produtos/postit-amarelo-100.webp";
 import postitNeon50 from "./assets/produtos/postit-neon-50.webp";
 import postitPalta50 from "./assets/produtos/postit-palta-50.webp";
 import postitPreto from "./assets/produtos/postit-preto.webp";
+import { FaRegCopy } from "react-icons/fa";
 
 export interface ProductProps {
   id: string;
@@ -23,13 +23,19 @@ export interface ProductProps {
   type: string;
   image: string;
   price: number;
+  isInCatalog: boolean;
 }
 
 function App() {
   const [products, setProducts] = useState<ProductProps[]>([]);
+  const [search, setSearch] = useState("Lapis Stich Azul");
   const [types, setTypes] = useState([""]);
   const [catalog, setCatalog] = useState([""]);
   const [isCopied, setIsCopied] = useState(false);
+
+  const amountOfProducts = products.reduce((prev, cur) => {
+    return cur.isInCatalog === true ? prev + 1 : prev;
+  }, 0);
   useEffect(() => {
     setProducts([
       {
@@ -38,6 +44,7 @@ function App() {
         type: "lapis",
         image: lapisStitchAzul,
         price: 3,
+        isInCatalog: false,
       },
       {
         id: "2",
@@ -45,6 +52,7 @@ function App() {
         type: "lapis",
         image: lapisStitchRosa,
         price: 3,
+        isInCatalog: false,
       },
       {
         id: "3",
@@ -52,6 +60,7 @@ function App() {
         type: "lapis",
         image: lapisVingadores,
         price: 3,
+        isInCatalog: false,
       },
       {
         id: "4",
@@ -59,6 +68,7 @@ function App() {
         type: "marca-texto",
         image: marcaTextoJoccar,
         price: 7,
+        isInCatalog: false,
       },
       {
         id: "5",
@@ -66,6 +76,7 @@ function App() {
         type: "marca-texto",
         image: marcaTextoPastelBRW,
         price: 4.2,
+        isInCatalog: false,
       },
       {
         id: "6",
@@ -73,6 +84,7 @@ function App() {
         type: "postit",
         image: postitAmararelo100,
         price: 7.5,
+        isInCatalog: false,
       },
       {
         id: "7",
@@ -80,6 +92,7 @@ function App() {
         type: "postit",
         image: postitNeon50,
         price: 7.4,
+        isInCatalog: false,
       },
       {
         id: "8",
@@ -87,6 +100,7 @@ function App() {
         type: "postit",
         image: postitPalta50,
         price: 6.5,
+        isInCatalog: false,
       },
       {
         id: "9",
@@ -94,6 +108,7 @@ function App() {
         type: "postit",
         image: postitPreto,
         price: 8.5,
+        isInCatalog: false,
       },
       {
         id: "10",
@@ -101,6 +116,7 @@ function App() {
         type: "cola-bastao",
         image: colaBastaoHomemAranha,
         price: 5.6,
+        isInCatalog: false,
       },
     ]);
   }, []);
@@ -119,11 +135,21 @@ function App() {
 
   const handleAddProduct = (id: string) => {
     const theProduct = products.find((product) => product.id === id);
+    setProducts((prevState) =>
+      prevState.map((product) =>
+        product.id === id ? { ...product, isInCatalog: true } : product
+      )
+    );
     if (theProduct) setCatalog((prevState) => [...prevState, theProduct.name]);
   };
 
   const handleRemoveProduct = (id: string) => {
     const theProduct = products.find((product) => product.id === id);
+    setProducts((prevState) =>
+      prevState.map((product) =>
+        product.id === id ? { ...product, isInCatalog: false } : product
+      )
+    );
     if (theProduct)
       setCatalog((prevState) =>
         prevState.filter((product) => product !== theProduct.name)
@@ -142,9 +168,26 @@ function App() {
     }, 1500);
   };
 
+  const searchProducts = (): ProductProps[] => {
+    console.log(search.toLowerCase());
+    if (search) {
+      console.log(products);
+      const newProducts = products.filter((product) => {
+        console.log(
+          product.name.toLowerCase() + " === " + search.toLowerCase()
+        );
+
+        return product.name.toLowerCase().includes(search.toLowerCase());
+      });
+      console.log(newProducts);
+      return newProducts;
+    }
+    return products;
+  };
+
   return (
     <>
-      <div className="w-full bg-slate-300 p-4">
+      <div className="w-full min-h-dvh bg-slate-300 p-4">
         <div className="flex justify-center items-center px-0 sm:px-28">
           <img className="w-24 mr-4" src={florDePapelLogo} />
           <div className="flex w-full sm:w-1/2 h-8 px-2 rounded-lg bg-slate-50 justify-center items-center">
@@ -153,6 +196,7 @@ function App() {
               className={"w-full h-4 px-2 bg-transparent outline-0"}
               type="search"
               placeholder="Procurar produto..."
+              onChange={(e) => setSearch(e.target.value)}
             />
           </div>
         </div>
@@ -162,22 +206,34 @@ function App() {
             <ul>
               {types.map((type) => (
                 <div>
-                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                    {type}
-                  </h4>
-                  <Separator />
-                  <div className="flex flex-wrap justify-center">
-                    {products
-                      .filter((product) => product.type === type)
-                      .map((product) => (
-                        <Product
-                          key={product.id}
-                          product={product}
-                          handleAddProduct={handleAddProduct}
-                          handleRemoveProduct={handleRemoveProduct}
-                        />
-                      ))}
-                  </div>
+                  {searchProducts().length !== 0 ? (
+                    <>
+                      {searchProducts().find(
+                        (product) => product.type === type
+                      ) && (
+                        <>
+                          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                            {type}
+                          </h4>
+                          <Separator />
+                        </>
+                      )}
+                      <div className="flex flex-wrap justify-center">
+                        {searchProducts()
+                          .filter((product) => product.type === type)
+                          .map((product) => (
+                            <Product
+                              key={product.id}
+                              product={product}
+                              handleAddProduct={handleAddProduct}
+                              handleRemoveProduct={handleRemoveProduct}
+                            />
+                          ))}
+                      </div>
+                    </>
+                  ) : (
+                    <h1>Nenhum produto encontrado</h1>
+                  )}
                 </div>
               ))}
             </ul>
@@ -205,11 +261,18 @@ function App() {
               </Button>
             )}
           </div>
-        </div>
-        <div className="absolute">
-          <div className="w-16 h-16 bg-green-700 rounded-full flex justify-center items-center">
-            <IoCopyOutline className="text-slate-100 font-extrabold text-xl" />
-          </div>
+          {amountOfProducts !== 0 && (
+            <div className="fixed bottom-3 right-3">
+              <div className="w-5 h-5 bg-sky-600 rounded-full flex justify-center items-center relative top-5 left-10">
+                <p className="text-xs font-extrabold text-slate-200">
+                  {amountOfProducts}
+                </p>
+              </div>
+              <div className="w-14 h-14 bg-gray-900 rounded-full flex justify-center items-center">
+                <FaRegCopy className="text-2xl text-slate-200" />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>

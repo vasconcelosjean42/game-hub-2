@@ -24,7 +24,11 @@ const Product = ({ product, handleAddProduct, handleRemoveProduct }: Props) => {
 
   return (
     <Dialog>
-      <Card className={`inline-block m-4 ${isAdd && "border-green-500"}`}>
+      <Card
+        className={`inline-block m-4 ${
+          product.isInCatalog && "border-green-500"
+        }`}
+      >
         <CardHeader>
           <CardTitle>{product.name}</CardTitle>
           <CardDescription>R$ {product.price.toFixed(2)}</CardDescription>
@@ -44,15 +48,14 @@ const Product = ({ product, handleAddProduct, handleRemoveProduct }: Props) => {
           <Button
             className="w-48"
             onClick={() => {
-              setIsAdd((prevState) => !prevState);
-              isAdd
+              product.isInCatalog
                 ? handleRemoveProduct(product.id)
                 : handleAddProduct(product.id);
             }}
-            variant={isAdd ? "destructive" : "default"}
+            variant={product.isInCatalog ? "destructive" : "default"}
             size={"lg"}
           >
-            {isAdd ? "Remover do catálogo" : "Add ao catálogo"}
+            {product.isInCatalog ? "Remover do catálogo" : "Add ao catálogo"}
           </Button>
         </CardFooter>
       </Card>
