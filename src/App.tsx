@@ -15,6 +15,16 @@ import postitAmararelo100 from "./assets/produtos/postit-amarelo-100.webp";
 import postitNeon50 from "./assets/produtos/postit-neon-50.webp";
 import postitPalta50 from "./assets/produtos/postit-palta-50.webp";
 import postitPreto from "./assets/produtos/postit-preto.webp";
+import lapisCisMove from "./assets/produtos/lapis/cis-move.webp";
+import lapisTilibraHappy from "./assets/produtos/lapis/tilibra-happy.webp";
+import postitPastel50 from "./assets/produtos/postit/postit-pastel-50.webp";
+import canetaAbacate from "./assets/produtos/canetas/caneta-abacate.webp";
+import canetaBambuPanda from "./assets/produtos/canetas/caneta-bambu-panda.webp";
+import canetaBobEsponja from "./assets/produtos/canetas/caneta-bob-esponja.webp";
+import canetaBorboletas from "./assets/produtos/canetas/caneta-borboletas.webp";
+import canetaCactuCute from "./assets/produtos/canetas/caneta-cactu-cute.webp";
+import canetaCactu from "./assets/produtos/canetas/caneta-cactu.webp";
+
 import { FaRegCopy } from "react-icons/fa";
 
 export interface ProductProps {
@@ -28,7 +38,7 @@ export interface ProductProps {
 
 function App() {
   const [products, setProducts] = useState<ProductProps[]>([]);
-  const [search, setSearch] = useState("Lapis Stich Azul");
+  const [search, setSearch] = useState("");
   const [types, setTypes] = useState([""]);
   const [catalog, setCatalog] = useState([""]);
   const [isCopied, setIsCopied] = useState(false);
@@ -116,6 +126,78 @@ function App() {
         type: "cola-bastao",
         image: colaBastaoHomemAranha,
         price: 5.6,
+        isInCatalog: false,
+      },
+      {
+        id: "11",
+        name: "Lapis Tilibra Happy",
+        type: "lapis",
+        image: lapisTilibraHappy,
+        price: 2.2,
+        isInCatalog: false,
+      },
+      {
+        id: "12",
+        name: "Lapis Cis Move",
+        type: "lapis",
+        image: lapisCisMove,
+        price: 1.9,
+        isInCatalog: false,
+      },
+      {
+        id: "13",
+        name: "Post-it Tom Pastel",
+        type: "postit",
+        image: postitPastel50,
+        price: 7,
+        isInCatalog: false,
+      },
+      {
+        id: "14",
+        name: "Caneta Abacate",
+        type: "caneta",
+        image: canetaAbacate,
+        price: 6,
+        isInCatalog: false,
+      },
+      {
+        id: "15",
+        name: "Caneta Bambu Panda",
+        type: "caneta",
+        image: canetaBambuPanda,
+        price: 5.5,
+        isInCatalog: false,
+      },
+      {
+        id: "16",
+        name: "Caneta Bob Esponja",
+        type: "caneta",
+        image: canetaBobEsponja,
+        price: 10,
+        isInCatalog: false,
+      },
+      {
+        id: "17",
+        name: "Caneta Borboletas",
+        type: "caneta",
+        image: canetaBorboletas,
+        price: 8.6,
+        isInCatalog: false,
+      },
+      {
+        id: "18",
+        name: "Caneta Cactu Cute",
+        type: "caneta",
+        image: canetaCactuCute,
+        price: 6,
+        isInCatalog: false,
+      },
+      {
+        id: "19",
+        name: "Caneta Cactu",
+        type: "caneta",
+        image: canetaCactu,
+        price: 9,
         isInCatalog: false,
       },
     ]);
@@ -206,7 +288,7 @@ function App() {
             <ul>
               {types.map((type) => (
                 <div>
-                  {searchProducts().length !== 0 ? (
+                  {searchProducts().length !== 0 && (
                     <>
                       {searchProducts().find(
                         (product) => product.type === type
@@ -231,11 +313,12 @@ function App() {
                           ))}
                       </div>
                     </>
-                  ) : (
-                    <h1>Nenhum produto encontrado</h1>
                   )}
                 </div>
               ))}
+              {searchProducts().length === 0 && (
+                <p>Nenhum produto encontrado</p>
+              )}
             </ul>
           </div>
         </div>
@@ -246,7 +329,7 @@ function App() {
               <Separator className="w-36"></Separator>
             </div>
           ))} */}
-          <div className="flex items-center justify-center">
+          {/* <div className="flex items-center justify-center">
             {isCopied ? (
               <Button
                 className="w-36 bg-green-700 disabled:opacity-100"
@@ -256,22 +339,41 @@ function App() {
                 Items copiados ✓
               </Button>
             ) : (
-              <Button className="w-36" onClick={() => handleCopyCatalog()}>
+              <Button
+                className={`w-36 ${
+                  searchProducts().length === 0 && "disabled:opacity-100"
+                } disabled:opacity-80`}
+                onClick={() => handleCopyCatalog()}
+              >
                 Copiar catálogo
               </Button>
             )}
+          </div> */}
+          <div className="flex items-center justify-center">
+            <Button
+              className={`w-36 ${isCopied && "bg-green-600"}`}
+              onClick={() => handleCopyCatalog()}
+              disabled={amountOfProducts === 0 && true}
+            >
+              {isCopied ? "Items copiados ✓" : "Copiar catálogo"}
+            </Button>
           </div>
           {amountOfProducts !== 0 && (
-            <div className="fixed bottom-3 right-3">
+            <button
+              className="fixed bottom-5 right-3"
+              onClick={() => handleCopyCatalog()}
+            >
               <div className="w-5 h-5 bg-sky-600 rounded-full flex justify-center items-center relative top-5 left-10">
                 <p className="text-xs font-extrabold text-slate-200">
                   {amountOfProducts}
                 </p>
               </div>
-              <div className="w-14 h-14 bg-gray-900 rounded-full flex justify-center items-center">
+              <div
+                className={`w-16 h-16 t- bg-gray-900 transaction duration-300 active:bg-green-700 focus:bg-green-700 rounded-full flex justify-center items-center`}
+              >
                 <FaRegCopy className="text-2xl text-slate-200" />
               </div>
-            </div>
+            </button>
           )}
         </div>
       </div>

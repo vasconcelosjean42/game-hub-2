@@ -39,7 +39,7 @@ const Product = ({ product, handleAddProduct, handleRemoveProduct }: Props) => {
             onClick={() => setIsDisplay(true)}
           >
             <img
-              className="w-48 h-48 object-cover rounded-xl"
+              className="w-48 h-48 min-[325px]:w-56 min-[325px]:h-56 object-cover rounded-xl"
               src={product.image}
             />
           </CardContent>
