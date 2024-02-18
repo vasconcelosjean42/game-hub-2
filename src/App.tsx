@@ -6,8 +6,8 @@ import { Separator } from "@/components/ui/separator";
 import { IoSearchOutline } from "react-icons/io5";
 import florDePapelLogo from "./assets/flor-de-papel-logo-transparente-03.png";
 import colaBastaoHomemAranha from "./assets/produtos/cola-bastao-homem-aranha.webp";
-import lapisStitchAzul from "./assets/produtos/lapis-stitch-azul.webp";
-import lapisStitchRosa from "./assets/produtos/lapis-stitch-rosa.webp";
+import lapisStitchAzul from "./assets/produtos/lapis/lapis-stitch-azul.webp";
+import lapisStitchRosa from "./assets/produtos/lapis/lapis-stitch-rosa.webp";
 import lapisVingadores from "./assets/produtos/lapis-vingadores.webp";
 import marcaTextoJoccar from "./assets/produtos/marca-texto-joccar.webp";
 import marcaTextoPastelBRW from "./assets/produtos/marca-texto-pastel-brw.webp";
@@ -24,6 +24,31 @@ import canetaBobEsponja from "./assets/produtos/canetas/caneta-bob-esponja.webp"
 import canetaBorboletas from "./assets/produtos/canetas/caneta-borboletas.webp";
 import canetaCactuCute from "./assets/produtos/canetas/caneta-cactu-cute.webp";
 import canetaCactu from "./assets/produtos/canetas/caneta-cactu.webp";
+import canetaCactuNordeste from "./assets/produtos/canetas/caneta-cactu-nordeste.webp";
+import canetaEsferograficaBrw from "./assets/produtos/canetas/caneta-esferografica-brw.webp";
+import canetaFastFood from "./assets/produtos/canetas/caneta-fast-food.webp";
+import canetaFeras from "./assets/produtos/canetas/caneta-feras.webp";
+import canetaGamesApagavel from "./assets/produtos/canetas/caneta-games-apagavel.webp";
+import canetaGroot from "./assets/produtos/canetas/caneta-groot.webp";
+import canetaHidroPastelBrw from "./assets/produtos/canetas/caneta-hidro-pastel-brw.webp";
+import canetaManga from "./assets/produtos/canetas/caneta-manga.webp";
+import canetaOssinho from "./assets/produtos/canetas/caneta-ossinho.webp";
+import canetaPatinhas from "./assets/produtos/canetas/caneta-patinhas.webp";
+import canetaRetro from "./assets/produtos/canetas/caneta-retro.webp";
+import canetaRetroUrsos from "./assets/produtos/canetas/caneta-retro-ursos.webp";
+import canetaSaturno from "./assets/produtos/canetas/caneta-saturno.webp";
+import canetaSeringa from "./assets/produtos/canetas/caneta-seringa.webp";
+import canetaXadrez from "./assets/produtos/canetas/caneta-xadrez.webp";
+import cadernoHarryPotterListaCasas from "./assets/produtos/cadernos/caderno-harry-potter-lista-casas.webp";
+import cadernoHarryPotterBrasaoCasas from "./assets/produtos/cadernos/caderno-harry-potter-brasao-casas.webp";
+import cadernoSemAdesivoJoaninhas from "./assets/produtos/cadernos/caderno-sem-adesivo-joaninhas.webp";
+import cadernoSemAdesivoCachorrinhos from "./assets/produtos/cadernos/caderno-sem-adesivo-cachorrinhos.webp";
+import cadernoSemAdesivoFlores from "./assets/produtos/cadernos/caderno-sem-adesivo-flores.webp";
+import cadernoSemadesivocoracoesdoce from "./assets/produtos/cadernos/caderno-sem-adesivo-coracoes-doce.webp";
+import cadernoFridaVermelho from "./assets/produtos/cadernos/caderno-frida-vermelho.webp";
+import cadernoHardWork from "./assets/produtos/cadernos/caderno-hard-work.webp";
+import cadernoCraftcolorPapelao from "./assets/produtos/cadernos/caderno-craftcolor-papelao.webp";
+import cadernoStarWars from "./assets/produtos/cadernos/caderno-star-wars.webp";
 
 import { FaRegCopy } from "react-icons/fa";
 
@@ -33,15 +58,37 @@ export interface ProductProps {
   type: string;
   image: string;
   price: number;
+  description: string;
+  models?: {
+    text: string;
+    isEnable: boolean;
+  }[];
   isInCatalog: boolean;
+}
+
+interface ICatalog {
+  name: string;
+  price: string;
+  model?: string;
 }
 
 function App() {
   const [products, setProducts] = useState<ProductProps[]>([]);
   const [search, setSearch] = useState("");
   const [types, setTypes] = useState([""]);
-  const [catalog, setCatalog] = useState([""]);
+  const [catalog, setCatalog] = useState<ICatalog[]>([
+    {
+      name: "",
+      price: "",
+      model: "",
+    },
+  ]);
   const [isCopied, setIsCopied] = useState(false);
+
+  const total = products
+    .filter((product) => product.isInCatalog === true)
+    .reduce((prev, cur) => prev + cur.price, 0)
+    .toFixed(2);
 
   const amountOfProducts = products.reduce((prev, cur) => {
     return cur.isInCatalog === true ? prev + 1 : prev;
@@ -50,26 +97,47 @@ function App() {
     setProducts([
       {
         id: "1",
-        name: "Lapis Stich Azul",
+        name: "Lápis Stich Azul Molin",
         type: "lapis",
         image: lapisStitchAzul,
         price: 3,
+        description: "",
         isInCatalog: false,
       },
       {
         id: "2",
-        name: "Lapis Stich Rosa",
+        name: "Lápis Stich Rosa Molin",
         type: "lapis",
         image: lapisStitchRosa,
         price: 3,
+        description: "",
         isInCatalog: false,
       },
       {
         id: "3",
-        name: "Lapis Vingadores",
+        name: "Lápis Vingadores Molin",
         type: "lapis",
         image: lapisVingadores,
         price: 3,
+        description: "",
+        models: [
+          {
+            text: "Capitão América",
+            isEnable: true,
+          },
+          {
+            text: "Hulk",
+            isEnable: true,
+          },
+          {
+            text: "Thor",
+            isEnable: true,
+          },
+          {
+            text: "Homem de Ferro",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
@@ -78,6 +146,7 @@ function App() {
         type: "marca-texto",
         image: marcaTextoJoccar,
         price: 7,
+        description: "",
         isInCatalog: false,
       },
       {
@@ -86,6 +155,7 @@ function App() {
         type: "marca-texto",
         image: marcaTextoPastelBRW,
         price: 4.2,
+        description: "",
         isInCatalog: false,
       },
       {
@@ -94,6 +164,7 @@ function App() {
         type: "postit",
         image: postitAmararelo100,
         price: 7.5,
+        description: "100 folhas",
         isInCatalog: false,
       },
       {
@@ -102,6 +173,33 @@ function App() {
         type: "postit",
         image: postitNeon50,
         price: 7.4,
+        description: "50 folhas",
+        models: [
+          {
+            text: "Laranja",
+            isEnable: true,
+          },
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Roxo",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
@@ -110,6 +208,7 @@ function App() {
         type: "postit",
         image: postitPalta50,
         price: 6.5,
+        description: "50 folhas",
         isInCatalog: false,
       },
       {
@@ -118,6 +217,7 @@ function App() {
         type: "postit",
         image: postitPreto,
         price: 8.5,
+        description: "50 folhas",
         isInCatalog: false,
       },
       {
@@ -126,22 +226,43 @@ function App() {
         type: "cola-bastao",
         image: colaBastaoHomemAranha,
         price: 5.6,
+        description: "Cola bastão Molin, 9g",
         isInCatalog: false,
       },
       {
         id: "11",
-        name: "Lapis Tilibra Happy",
+        name: "Lápis Tilibra Happy",
         type: "lapis",
         image: lapisTilibraHappy,
         price: 2.2,
+        description: "",
+        models: [
+          {
+            text: "Lavanda",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
         id: "12",
-        name: "Lapis Cis Move",
+        name: "Lápis Cis Move",
         type: "lapis",
         image: lapisCisMove,
         price: 1.9,
+        description: "[Item sortido]",
         isInCatalog: false,
       },
       {
@@ -150,6 +271,29 @@ function App() {
         type: "postit",
         image: postitPastel50,
         price: 7,
+        description: "50 folhas",
+        models: [
+          {
+            text: "Lavanda",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
@@ -158,6 +302,7 @@ function App() {
         type: "caneta",
         image: canetaAbacate,
         price: 6,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
         isInCatalog: false,
       },
       {
@@ -166,6 +311,7 @@ function App() {
         type: "caneta",
         image: canetaBambuPanda,
         price: 5.5,
+        description: "Caneta em gel, clicável e com a escrita na cor preta",
         isInCatalog: false,
       },
       {
@@ -174,6 +320,7 @@ function App() {
         type: "caneta",
         image: canetaBobEsponja,
         price: 10,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
         isInCatalog: false,
       },
       {
@@ -182,6 +329,25 @@ function App() {
         type: "caneta",
         image: canetaBorboletas,
         price: 8.6,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        models: [
+          {
+            text: "Branco",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Lilás",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
@@ -190,6 +356,7 @@ function App() {
         type: "caneta",
         image: canetaCactuCute,
         price: 6,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
         isInCatalog: false,
       },
       {
@@ -198,6 +365,357 @@ function App() {
         type: "caneta",
         image: canetaCactu,
         price: 9,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        isInCatalog: false,
+      },
+      {
+        id: "20",
+        name: "Caneta Cactu Nordeste",
+        type: "caneta",
+        image: canetaCactuNordeste,
+        price: 9,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        isInCatalog: false,
+      },
+      {
+        id: "21",
+        name: "Caneta Esferografica Brw",
+        type: "caneta",
+        image: canetaEsferograficaBrw,
+        price: 9,
+        description: "Caneta esferográfica, ponta fina, na escrita azul",
+        models: [
+          {
+            text: "Branca com poá colorido",
+            isEnable: true,
+          },
+          {
+            text: "Rosa com corações dourados",
+            isEnable: true,
+          },
+          {
+            text: "Preta de bolinhas",
+            isEnable: true,
+          },
+          {
+            text: "Branca quandriculada",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "22",
+        name: "Caneta FastFood",
+        type: "caneta",
+        image: canetaFastFood,
+        price: 9,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        models: [
+          {
+            text: "Pipoca",
+            isEnable: true,
+          },
+          {
+            text: "Sanduíche",
+            isEnable: true,
+          },
+          {
+            text: "Pizza",
+            isEnable: true,
+          },
+          {
+            text: "Batata Frita",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "23",
+        name: "Caneta Feras",
+        type: "caneta",
+        image: canetaFeras,
+        price: 9,
+        description:
+          "[item sortido] Caneta em gel, clicável e com a escrita na cor preta",
+        isInCatalog: false,
+      },
+      {
+        id: "24",
+        name: "Caneta Games Apagável",
+        type: "caneta",
+        image: canetaGamesApagavel,
+        price: 9,
+        description: "Caneta apagável, cor azul, brw",
+        models: [
+          {
+            text: "Controle",
+            isEnable: true,
+          },
+          {
+            text: "Minigame",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "25",
+        name: "Caneta Groot",
+        type: "caneta",
+        image: canetaGroot,
+        price: 9,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        isInCatalog: false,
+      },
+      // {
+      //   id: "26",
+      //   name: "Caneta Hidrográfica Pastel Brw",
+      //   type: "caneta",
+      //   image: canetaHidroPastelBrw,
+      //   price: 9,
+      //   description: "Caneta hidrográfica, ponta 0.4mm, tom pastel",
+      //   isInCatalog: false,
+      // },
+      {
+        id: "27",
+        name: "Caneta Manga",
+        type: "caneta",
+        image: canetaManga,
+        price: 9,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        isInCatalog: false,
+      },
+      {
+        id: "28",
+        name: "Caneta Ossinho",
+        type: "caneta",
+        image: canetaOssinho,
+        price: 9,
+        description:
+          "[consultar modelo disponível] Caneta esferográfica, escrita em cor azul",
+        models: [
+          {
+            text: "1. Osso do Dedo",
+            isEnable: true,
+          },
+          {
+            text: "2. Fêmur",
+            isEnable: true,
+          },
+          {
+            text: "3. Coluna Vertebral",
+            isEnable: true,
+          },
+          {
+            text: "4. Fêmur, Fíbula e Tíbia",
+            isEnable: true,
+          },
+          {
+            text: "5. Úmero",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "29",
+        name: "Caneta Patinhas",
+        type: "caneta",
+        image: canetaPatinhas,
+        price: 9,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        isInCatalog: false,
+      },
+      {
+        id: "30",
+        name: "Caneta Retro",
+        type: "caneta",
+        image: canetaRetro,
+        price: 9,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        isInCatalog: false,
+      },
+      {
+        id: "31",
+        name: "Caneta Retro Ursos",
+        type: "caneta",
+        image: canetaRetroUrsos,
+        price: 9,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        isInCatalog: false,
+      },
+      {
+        id: "32",
+        name: "Caneta Saturno",
+        type: "caneta",
+        image: canetaSaturno,
+        price: 9,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        models: [
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "33",
+        name: "Caneta Seringa",
+        type: "caneta",
+        image: canetaSeringa,
+        price: 9,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        isInCatalog: false,
+      },
+      {
+        id: "34",
+        name: "Caderno Harry Potter Listras das Casas",
+        type: "caderno",
+        image: cadernoHarryPotterListaCasas,
+        price: 49.9,
+        description:
+          "Caderno College, Capa Dura, 10 Matérias, 160 Folhas off white, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "35",
+        name: "Caderno Harry Potter Brasao das Casas",
+        type: "caderno",
+        image: cadernoHarryPotterBrasaoCasas,
+        price: 49.9,
+        description:
+          "Caderno College, Capa Dura, 10 Matérias, 160 Folhas off white, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "36",
+        name: "Caderno Joaninhas",
+        type: "caderno",
+        image: cadernoSemAdesivoJoaninhas,
+        price: 25,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, não possui adesivo",
+        isInCatalog: false,
+      },
+      {
+        id: "37",
+        name: "Caderno Cachorrinhos",
+        type: "caderno",
+        image: cadernoSemAdesivoCachorrinhos,
+        price: 25,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, não possui adesivo",
+        isInCatalog: false,
+      },
+      {
+        id: "38",
+        name: "Caderno Flores",
+        type: "caderno",
+        image: cadernoSemAdesivoFlores,
+        price: 25,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, não possui adesivo",
+        isInCatalog: false,
+      },
+      {
+        id: "39",
+        name: "Caderno Coracões Doce",
+        type: "caderno",
+        image: cadernoSemadesivocoracoesdoce,
+        price: 25,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, não possui adesivo",
+        isInCatalog: false,
+      },
+      {
+        id: "40",
+        name: "Caderno Frida Kahlo Vermelho",
+        type: "caderno",
+        image: cadernoFridaVermelho,
+        price: 45,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "41",
+        name: "Caderno Hard Work",
+        type: "caderno",
+        image: cadernoHardWork,
+        price: 35,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "42",
+        name: "Caderno Craftcolor Papelão",
+        type: "caderno",
+        image: cadernoCraftcolorPapelao,
+        price: 40,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas off white, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "43",
+        name: "Caderno Star Wars",
+        type: "caderno",
+        image: cadernoStarWars,
+        price: 38,
+        description:
+          "Caderno Universitário, Capa Dura, 1 Matérias, 80 Folhas, Culturama, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "44",
+        name: "Caneta Xadrez",
+        type: "caneta",
+        image: canetaXadrez,
+        price: 5.8,
+        description:
+          "Caneta esferográfica, ponta fina e com a escrita na cor preta",
+        models: [
+          {
+            text: "Número 1",
+            isEnable: true,
+          },
+          {
+            text: "Número 2",
+            isEnable: true,
+          },
+          {
+            text: "Número 3",
+            isEnable: true,
+          },
+          {
+            text: "Número 4",
+            isEnable: true,
+          },
+          {
+            text: "Número 5",
+            isEnable: true,
+          },
+          {
+            text: "Número 6",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
     ]);
@@ -215,14 +733,22 @@ function App() {
     );
   }, [products]);
 
-  const handleAddProduct = (id: string) => {
+  const handleAddProduct = (id: string, model: string) => {
     const theProduct = products.find((product) => product.id === id);
     setProducts((prevState) =>
       prevState.map((product) =>
         product.id === id ? { ...product, isInCatalog: true } : product
       )
     );
-    if (theProduct) setCatalog((prevState) => [...prevState, theProduct.name]);
+    if (theProduct)
+      setCatalog((prevState) => [
+        ...prevState,
+        {
+          name: theProduct.name,
+          price: theProduct.price.toString(),
+          model: model ? model : "",
+        },
+      ]);
   };
 
   const handleRemoveProduct = (id: string) => {
@@ -234,7 +760,7 @@ function App() {
     );
     if (theProduct)
       setCatalog((prevState) =>
-        prevState.filter((product) => product !== theProduct.name)
+        prevState.filter((product) => product.name !== theProduct.name)
       );
   };
 
@@ -242,7 +768,22 @@ function App() {
     const pedido =
       "Olá flor de papel gostaria de fazer um pedido!\n" +
       "Esses são os produtos:\n" +
-      catalog.map((c) => c + "\n").join("");
+      catalog
+        .map((c) => {
+          if (c.name.length !== 0)
+            return (
+              c.name +
+              "[" +
+              c.model +
+              "]" +
+              " (R$ " +
+              Number(c.price).toFixed(2) +
+              ")" +
+              "\n"
+            );
+        })
+        .join("") +
+      `\n Valor Total: R$ ${total}`;
     navigator.clipboard.writeText(pedido);
     setIsCopied(true);
     setTimeout(() => {
@@ -359,21 +900,29 @@ function App() {
             </Button>
           </div>
           {amountOfProducts !== 0 && (
-            <button
-              className="fixed bottom-5 right-3"
-              onClick={() => handleCopyCatalog()}
-            >
-              <div className="w-5 h-5 bg-sky-600 rounded-full flex justify-center items-center relative top-5 left-10">
-                <p className="text-xs font-extrabold text-slate-200">
-                  {amountOfProducts}
-                </p>
-              </div>
-              <div
-                className={`w-16 h-16 t- bg-gray-900 transaction duration-300 active:bg-green-700 focus:bg-green-700 rounded-full flex justify-center items-center`}
+            <>
+              <button
+                className="fixed bottom-5 right-3"
+                onClick={() => handleCopyCatalog()}
               >
-                <FaRegCopy className="text-2xl text-slate-200" />
+                <div className="w-5 h-5 bg-sky-600 rounded-full flex justify-center items-center relative top-5 left-10">
+                  <p className="text-xs font-extrabold text-slate-200">
+                    {amountOfProducts}
+                  </p>
+                </div>
+                <div
+                  className={`w-16 h-16 t- bg-gray-900 transaction duration-300 active:bg-green-700 focus:bg-green-700 rounded-full flex justify-center items-center`}
+                >
+                  <FaRegCopy className="text-2xl text-slate-200" />
+                </div>
+              </button>
+              <div className="w-20 h-16 fixed bottom-5 left-3 bg-sky-600 rounded-xl flex justify-center items-center">
+                <div className="text-sm font-semibold text-slate-50">
+                  <p>Total</p>
+                  <p>R$ {total}</p>
+                </div>
               </div>
-            </button>
+            </>
           )}
         </div>
       </div>
