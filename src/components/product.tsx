@@ -34,7 +34,7 @@ const Product = ({ product, handleAddProduct, handleRemoveProduct }: Props) => {
         m-4 ${product.isInCatalog && "border-green-500"} p-4`}
       >
         <CardHeader>
-          <CardTitle>{product.name}</CardTitle>
+          <CardTitle className="max-w-52 self-center">{product.name}</CardTitle>
           <p>R$ {product.price.toFixed(2)}</p>
           <CardDescription className="text-left mb-5 max-w-60">
             {product.description}

@@ -21,7 +21,6 @@ import postitPastel50 from "./assets/produtos/postit/postit-pastel-50.webp";
 import canetaAbacate from "./assets/produtos/canetas/caneta-abacate.webp";
 import canetaBambuPanda from "./assets/produtos/canetas/caneta-bambu-panda.webp";
 import canetaBobEsponja from "./assets/produtos/canetas/caneta-bob-esponja.webp";
-import canetaBorboletas from "./assets/produtos/canetas/caneta-borboletas.webp";
 import canetaCactuCute from "./assets/produtos/canetas/caneta-cactu-cute.webp";
 import canetaCactu from "./assets/produtos/canetas/caneta-cactu.webp";
 import canetaCactuNordeste from "./assets/produtos/canetas/caneta-cactu-nordeste.webp";
@@ -49,6 +48,46 @@ import cadernoFridaVermelho from "./assets/produtos/cadernos/caderno-frida-verme
 import cadernoHardWork from "./assets/produtos/cadernos/caderno-hard-work.webp";
 import cadernoCraftcolorPapelao from "./assets/produtos/cadernos/caderno-craftcolor-papelao.webp";
 import cadernoStarWars from "./assets/produtos/cadernos/caderno-star-wars.webp";
+import borrachaCapaPlasticaColorida from "./assets/produtos/borracha/borracha-capa-plastica-colorida.webp";
+import borrachaCisMove from "./assets/produtos/borracha/borracha-cis-move.webp";
+import borrachaFoods from "./assets/produtos/borracha/borracha-foods.webp";
+import borrachaVingadores from "./assets/produtos/borracha/borracha-vingadores.webp";
+import borrachaPool from "./assets/produtos/borracha/borracha-pool.webp";
+import cadernoDisneyBabyYoda from "./assets/produtos/cadernos/caderno-disney-baby-yoda.webp";
+import cadernoDisneyCininho from "./assets/produtos/cadernos/caderno-disney-cininho.webp";
+import cadernoDisneyElza from "./assets/produtos/cadernos/caderno-disney-elza.webp";
+import cadernoDisneyOlaf from "./assets/produtos/cadernos/caderno-disney-olaf.webp";
+import cadernoHarryPotterBrasaoEscolas from "./assets/produtos/cadernos/caderno-harry-potter-brasao-escolas.webp";
+import cadernoHarryPotterDefesaContraArtesDasTrevas from "./assets/produtos/cadernos/caderno-harry-potter-defesa-contra-artes-das-trevas.webp";
+import cadernoHouseOfDragonBrasaoDoDragao from "./assets/produtos/cadernos/caderno-house-of-dragon-brasao-do-dragao.webp";
+import cadernoHouseOfDragonDragaoEEspada from "./assets/produtos/cadernos/caderno-house-of-dragon-dragao-e-espada.webp";
+import cadernoHouseOfDragonFireWillReign from "./assets/produtos/cadernos/caderno-house-of-dragon-fire-will-reign.webp";
+import cadernoHouseOfDragonYouWinOrYouDie from "./assets/produtos/cadernos/caderno-house-of-dragon-you-win-or-you-die.webp";
+import cadernoMarbleBeAuthentic from "./assets/produtos/cadernos/caderno-marble-be-authentic.webp";
+import cadernoMarbleBeautifulBeYou from "./assets/produtos/cadernos/caderno-marble-beautiful-be-you.webp";
+import cadernoMarbleDreamTheImpossible from "./assets/produtos/cadernos/caderno-marble-dream-the-impossible.webp";
+import cadernoMarbleLovelyStrong from "./assets/produtos/cadernos/caderno-marble-lovely-strong.webp";
+import cadernoRickAndMortyCabecaDoMorty from "./assets/produtos/cadernos/caderno-rick-and-morty-cabeca-do-morty.webp";
+import cadernoRickAndMortyFocoNaCiencia from "./assets/produtos/cadernos/caderno-rick-and-morty-foco-na-ciencia.webp";
+import cadernoRickAndMortyPortalRickAndMorty from "./assets/produtos/cadernos/caderno-rick-and-morty-portal-rick-and-morty.webp";
+import apontadorComDepositoSpiroCis from "./assets/produtos/apontadores/apontador-com-deposito-spiro-cis.webp";
+import apontadorMinnie from "./assets/produtos/apontadores/apontador-minnie.webp";
+import apontadorSoulBrw from "./assets/produtos/apontadores/apontador-soul-brw.webp";
+import apontadorVingadores from "./assets/produtos/apontadores/apontador-vingadores.webp";
+import borrachaQuadraDaSpiroCis from "./assets/produtos/borracha/borracha-quadrada-spiro-cis.webp";
+import canetaBorboletas from "./assets/produtos/canetas/caneta-borboletas.webp";
+import canetaFofaDocinhoPerfumadaEmGel from "./assets/produtos/canetas/caneta-fofa-docinho-perfumada-em-gel.webp";
+import canetaFofaNaruto from "./assets/produtos/canetas/caneta-fofa-naruto.webp";
+import canetaGarfield from "./assets/produtos/canetas/caneta-garfield.webp";
+import canetaSeringa02 from "./assets/produtos/canetas/caneta-seringa-02.webp";
+import corretivoCanetaBrw4g from "./assets/produtos/corretivosFita/corretivo-caneta-brw-4g.webp";
+import corretivoFitaNeonTransparente from "./assets/produtos/corretivosFita/corretivo-fita-neon-transparente.webp";
+import corretivoFitaPastelSolido from "./assets/produtos/corretivosFita/corretivo-fita-pastel-solido.webp";
+import corretivoFitaPastelTransparente12m from "./assets/produtos/corretivosFita/rretivo-fita-pastel-transparente-12m.webp";
+import estojoEspampadoDreamBrw from "./assets/produtos/estojos/estojo-espampado-dream-brw.webp";
+import estojoEscolarColorZipperWinPaper from "./assets/produtos/estojos/estojo-escolar-color-zipper-win-paper.webp";
+
+import grampeadorBrwTonsPastel from "./assets/produtos/grampeadores/grampeador-brw-tons-pastel.webp";
 
 import { FaRegCopy } from "react-icons/fa";
 
@@ -337,7 +376,7 @@ function App() {
           },
           {
             text: "Rosa",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Azul",
@@ -345,7 +384,7 @@ function App() {
           },
           {
             text: "Lilás",
-            isEnable: true,
+            isEnable: false,
           },
         ],
         isInCatalog: false,
@@ -713,6 +752,688 @@ function App() {
           },
           {
             text: "Número 6",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "45",
+        name: "Borracha Capa Plastica Colorida",
+        type: "borracha",
+        image: borrachaCapaPlasticaColorida,
+        price: 2.4,
+        description: "",
+        isInCatalog: false,
+      },
+      {
+        id: "46",
+        name: "Borracha Cis Move",
+        type: "borracha",
+        image: borrachaCisMove,
+        price: 3.6,
+        description: "",
+        models: [
+          {
+            text: "Azul - Roxo",
+            isEnable: true,
+          },
+          {
+            text: "Verde - Azul",
+            isEnable: true,
+          },
+          {
+            text: "Rosa - Amarelo",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "47",
+        name: "Borracha Foods",
+        type: "borracha",
+        image: borrachaFoods,
+        price: 3.2,
+        description: "",
+        models: [
+          {
+            text: "Melância",
+            isEnable: true,
+          },
+          {
+            text: "Picolé",
+            isEnable: true,
+          },
+          {
+            text: "Biscoito",
+            isEnable: true,
+          },
+          {
+            text: "Limão",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "48",
+        name: "Borracha Vingadores",
+        type: "borracha",
+        image: borrachaVingadores,
+        price: 4.5,
+        description: "",
+        isInCatalog: false,
+      },
+      {
+        id: "49",
+        name: "Borracha Ursinho Pool",
+        type: "borracha",
+        image: borrachaPool,
+        price: 2.9,
+        description: "",
+        models: [
+          {
+            text: "Tigrão",
+            isEnable: true,
+          },
+          {
+            text: "Leitão",
+            isEnable: true,
+          },
+          {
+            text: "Ursinho pool e sua turma",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "50",
+        name: "Caderno Disney Baby Yoda",
+        type: "caderno",
+        image: cadernoDisneyBabyYoda,
+        price: 41.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "51",
+        name: "Caderno Disney Cininho",
+        type: "caderno",
+        image: cadernoDisneyCininho,
+        price: 41.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "52",
+        name: "Caderno Disney Elza",
+        type: "caderno",
+        image: cadernoDisneyElza,
+        price: 41.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "53",
+        name: "Caderno Disney Olaf",
+        type: "caderno",
+        image: cadernoDisneyOlaf,
+        price: 41.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "54",
+        name: "Caderno Harry Potter Brasao Escolas",
+        type: "caderno",
+        image: cadernoHarryPotterBrasaoEscolas,
+        price: 39.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "55",
+        name: "Caderno Harry Potter Defesa Contra Artes Das Trevas",
+        type: "caderno",
+        image: cadernoHarryPotterDefesaContraArtesDasTrevas,
+        price: 39.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "56",
+        name: "Caderno House Of Dragon Brasao Do Dragao",
+        type: "caderno",
+        image: cadernoHouseOfDragonBrasaoDoDragao,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "57",
+        name: "Caderno House Of Dragon Dragao E Espada",
+        type: "caderno",
+        image: cadernoHouseOfDragonDragaoEEspada,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "58",
+        name: "Caderno House Of Dragon Fire Will Reign",
+        type: "caderno",
+        image: cadernoHouseOfDragonFireWillReign,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "59",
+        name: "Caderno House Of Dragon You Win Or You Die",
+        type: "caderno",
+        image: cadernoHouseOfDragonYouWinOrYouDie,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "60",
+        name: "Caderno Marmorizado Be Authentic",
+        type: "caderno",
+        image: cadernoMarbleBeAuthentic,
+        price: 35.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "61",
+        name: "Caderno Marmorizado Beautiful Be You",
+        type: "caderno",
+        image: cadernoMarbleBeautifulBeYou,
+        price: 35.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "62",
+        name: "Caderno Marmorizado Dream The Impossible",
+        type: "caderno",
+        image: cadernoMarbleDreamTheImpossible,
+        price: 35.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "63",
+        name: "Caderno Marmorizado Lovely Strong",
+        type: "caderno",
+        image: cadernoMarbleLovelyStrong,
+        price: 35.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "64",
+        name: "Caderno Rick And Morty Cabeca Do Morty",
+        type: "caderno",
+        image: cadernoRickAndMortyCabecaDoMorty,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "65",
+        name: "Caderno Rick And Morty Foco Na Ciencia",
+        type: "caderno",
+        image: cadernoRickAndMortyFocoNaCiencia,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "66",
+        name: "Caderno Rick And Morty Portal Rick And Morty",
+        type: "caderno",
+        image: cadernoRickAndMortyPortalRickAndMorty,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "67",
+        name: "Apontador Com Deposito Spiro Cis",
+        type: "apontador",
+        image: apontadorComDepositoSpiroCis,
+        price: 4,
+        description: "",
+        models: [
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Cinza",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Vermelho",
+            isEnable: true,
+          },
+          {
+            text: "Ciano",
+            isEnable: true,
+          },
+          {
+            text: "Roxo",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "68",
+        name: "Apontador Minnie",
+        type: "apontador",
+        image: apontadorMinnie,
+        price: 4.2,
+        description: "",
+        models: [
+          {
+            text: "Vermeho",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "69",
+        name: "Apontador Soul Brw",
+        type: "apontador",
+        image: apontadorSoulBrw,
+        price: 3.15,
+        description: "",
+        models: [
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Roxo",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "70",
+        name: "Apontador Vingadores",
+        type: "apontador",
+        image: apontadorVingadores,
+        price: 4.2,
+        description: "",
+        models: [
+          {
+            text: "Thor",
+            isEnable: true,
+          },
+          {
+            text: "Homem de ferro",
+            isEnable: true,
+          },
+          {
+            text: "Pantera Negra",
+            isEnable: true,
+          },
+          {
+            text: "Capitão América",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "71",
+        name: "Borracha Quadra da Spiro Cis",
+        type: "borracha",
+        image: borrachaQuadraDaSpiroCis,
+        price: 4,
+        description: "",
+        models: [
+          {
+            text: "Vermelho",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Ciano",
+            isEnable: true,
+          },
+          {
+            text: "Roxa",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "72",
+        name: "Caneta Fofa Docinho Perfumada Em Gel",
+        type: "caneta",
+        image: canetaFofaDocinhoPerfumadaEmGel,
+        price: 9.5,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        models: [
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Marrom",
+            isEnable: true,
+          },
+          {
+            text: "Branco",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "73",
+        name: "Caneta Fofa Naruto",
+        type: "caneta",
+        image: canetaFofaNaruto,
+        price: 8.6,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        models: [
+          {
+            text: "Sasuke",
+            isEnable: true,
+          },
+          {
+            text: "Sakura",
+            isEnable: true,
+          },
+          {
+            text: "Naruto",
+            isEnable: true,
+          },
+          {
+            text: "Kakashi",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "74",
+        name: "Caneta Garfield",
+        type: "caneta",
+        image: canetaGarfield,
+        price: 7,
+        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        isInCatalog: false,
+      },
+      {
+        id: "75",
+        name: "Caneta Seringa com Líquido Colorido",
+        type: "caneta",
+        image: canetaSeringa02,
+        price: 7.5,
+        description:
+          "Caneta esferográfica, ponta fina e com a escrita na cor azul",
+        models: [
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: false,
+          },
+          {
+            text: "Amarela",
+            isEnable: true,
+          },
+          {
+            text: "Vermelho",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "76",
+        name: "Corretivo Caneta Brw 4ml",
+        type: "corretivos fita",
+        image: corretivoCanetaBrw4g,
+        price: 5,
+        description: "",
+        models: [
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Lilás",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "77",
+        name: "Corretivo Fita Neon Transparente",
+        type: "corretivos fita",
+        image: corretivoFitaNeonTransparente,
+        price: 5.5,
+        description: "",
+        models: [
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "78",
+        name: "Corretivo Fita Pastel Solido",
+        type: "corretivos fita",
+        image: corretivoFitaPastelSolido,
+        price: 6.2,
+        description: "",
+        models: [
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Nude",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Lilás",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "79",
+        name: "Corretivo Fita Pastel Transparente 12m",
+        type: "corretivos fita",
+        image: corretivoFitaPastelTransparente12m,
+        price: 9,
+        description: "",
+        models: [
+          {
+            text: "Branco",
+            isEnable: true,
+          },
+          {
+            text: "Lavanda",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Nude",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "80",
+        name: "Estojo Espampado Dream Brw",
+        type: "estojo",
+        image: estojoEspampadoDreamBrw,
+        price: 28,
+        description: "",
+        isInCatalog: false,
+      },
+      {
+        id: "81",
+        name: "Estojo Escolar Color Zipper Win Paper",
+        type: "estojo",
+        image: estojoEscolarColorZipperWinPaper,
+        price: 18,
+        description: "",
+        models: [
+          {
+            text: "Ciano",
+            isEnable: true,
+          },
+          {
+            text: "Lavanda",
+            isEnable: true,
+          },
+          {
+            text: "Roxo",
+            isEnable: false,
+          },
+          {
+            text: "laranja",
+            isEnable: false,
+          },
+          {
+            text: "Vermelho",
+            isEnable: false,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "82",
+        name: "Grampeador Brw Tons Pastel",
+        type: "grampeadores",
+        image: grampeadorBrwTonsPastel,
+        price: 14,
+        description: "",
+        models: [
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Lavanda",
             isEnable: true,
           },
         ],
