@@ -10,7 +10,7 @@ import lapisStitchAzul from "./assets/produtos/lapis/lapis-stitch-azul.webp";
 import lapisStitchRosa from "./assets/produtos/lapis/lapis-stitch-rosa.webp";
 import lapisVingadores from "./assets/produtos/lapis-vingadores.webp";
 import marcaTextoJoccar from "./assets/produtos/marca-texto-joccar.webp";
-import marcaTextoPastelBRW from "./assets/produtos/marca-texto-pastel-brw.webp";
+import marcaTextoPastelBRW from "./assets/produtos/marcaTexto/marca-texto-pastel-brw-02.webp";
 import postitAmararelo100 from "./assets/produtos/postit-amarelo-100.webp";
 import postitNeon50 from "./assets/produtos/postit-neon-50.webp";
 import postitPalta50 from "./assets/produtos/postit-palta-50.webp";
@@ -86,8 +86,33 @@ import corretivoFitaPastelSolido from "./assets/produtos/corretivosFita/corretiv
 import corretivoFitaPastelTransparente12m from "./assets/produtos/corretivosFita/rretivo-fita-pastel-transparente-12m.webp";
 import estojoEspampadoDreamBrw from "./assets/produtos/estojos/estojo-espampado-dream-brw.webp";
 import estojoEscolarColorZipperWinPaper from "./assets/produtos/estojos/estojo-escolar-color-zipper-win-paper.webp";
-
 import grampeadorBrwTonsPastel from "./assets/produtos/grampeadores/grampeador-brw-tons-pastel.webp";
+import lapisHbSpiroCis from "./assets/produtos/lapis/lapis-hb-spiro-cis.webp";
+import lapisWestVillage from "./assets/produtos/lapis/lapis-west-village.webp";
+import marcaTextoComGlitter from "./assets/produtos/marcaTexto/marca-texto-com-glitter.webp";
+import marcaTextoEmGel from "./assets/produtos/marcaTexto/marca-texto-em-gel.webp";
+import marcaTextoPontaDupla from "./assets/produtos/marcaTexto/marca-texto-ponta-dupla.webp";
+import marcaTextoUrsinhos from "./assets/produtos/marcaTexto/marca-texto-ursinhos.webp";
+import marcaTextoApagavel from "./assets/produtos/marcaTexto/marca-texto-apagavel.webp";
+import canetaApagavelAstronautas from "./assets/produtos/canetas/caneta-apagavel-astronautas.webp";
+import canetaApagavelBichinhos from "./assets/produtos/canetas/caneta-apagavel-bichinhos.webp";
+import canetaApagavelCoracaoEPompom from "./assets/produtos/canetas/caneta-apagavel-coracao-e-pompom.webp";
+import canetaApagavelCriaturasDoMar from "./assets/produtos/canetas/caneta-apagavel-criaturas-do-mar.webp";
+import canetaApagavelPandas from "./assets/produtos/canetas/caneta-apagavel-pandas.webp";
+import canetaCisScript from "./assets/produtos/canetas/caneta-cis-script.webp";
+import canetaEsferograficaCisLolipop from "./assets/produtos/canetas/caneta-esferografica-cis-lolipop.webp";
+import canetaEsferograficaCisMinus04 from "./assets/produtos/canetas/caneta-esferografica-cis-minus-04.webp";
+import canetaEsferograficaClicacelSuperColorida from "./assets/produtos/canetas/caneta-esferografica-clicacel-super-colorida.webp";
+import canetaEsferograficaColorida from "./assets/produtos/canetas/caneta-esferografica-colorida.webp";
+import canetaGatinhos from "./assets/produtos/canetas/caneta-gatinhos.webp";
+import canetaSpiroCis from "./assets/produtos/canetas/caneta-spiro-cis.webp";
+import apontadorRapitores from "./assets/produtos/apontadores/apontador-rapitores.webp";
+
+import grafiteAnimaisFofos07 from "./assets/produtos/grafites/grafite-animais-fofos-07.webp";
+import grafiteLapiseiraTrocaPontaBrw from "./assets/produtos/grafites/grafite-lapiseira-troca-ponta-brw.webp";
+import grafiteTonsLeves05 from "./assets/produtos/grafites/grafite-tons-leves-05.webp";
+import grafiteTonsLeves07 from "./assets/produtos/grafites/grafite-tons-leves-07.webp";
+import grafiteTrasparenteStyleOriginal07 from "./assets/produtos/grafites/grafite-trasparente-style-original-07.webp";
 
 import { FaRegCopy } from "react-icons/fa";
 
@@ -1434,6 +1459,643 @@ function App() {
           },
           {
             text: "Lavanda",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "83",
+        name: "Caneta Hb Spiro Cis",
+        type: "lapis",
+        image: lapisHbSpiroCis,
+        price: 1.9,
+        description: "",
+        models: [
+          {
+            text: "Laranja",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Roxo",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "84",
+        name: "Lapis West Village",
+        type: "lapis",
+        image: lapisWestVillage,
+        price: 2.2,
+        description: "",
+        isInCatalog: false,
+      },
+      {
+        id: "85",
+        name: "Marca Texto Com Glitter",
+        type: "marca-texto",
+        image: marcaTextoComGlitter,
+        price: 8,
+        description: "",
+        isInCatalog: false,
+      },
+      {
+        id: "86",
+        name: "Marca Texto Em Gel",
+        type: "marca-texto",
+        image: marcaTextoEmGel,
+        price: 6.2,
+        description: "",
+        models: [
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "87",
+        name: "Marca Texto Ponta Dupla",
+        type: "marca-texto",
+        image: marcaTextoPontaDupla,
+        price: 5,
+        description: "",
+        models: [
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+          {
+            text: "Roxo",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Laranja",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "88",
+        name: "Marca Texto Ursinhos",
+        type: "marca-texto",
+        image: marcaTextoUrsinhos,
+        price: 2.2,
+        description: "",
+        models: [
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+          {
+            text: "Lilás",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: false,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: false,
+          },
+          {
+            text: "Laranja",
+            isEnable: false,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "89",
+        name: "Marca Texto Apagável",
+        type: "marca-texto",
+        image: marcaTextoApagavel,
+        price: 4.15,
+        description: "",
+        models: [
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+          {
+            text: "Lilás",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: false,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "90",
+        name: "Caneta Apagavel Astronautas",
+        type: "caneta",
+        image: canetaApagavelAstronautas,
+        price: 6.0,
+        description: "",
+        models: [
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Branco",
+            isEnable: true,
+          },
+          {
+            text: "Preto",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "91",
+        name: "Caneta Apagavel Bichinhos",
+        type: "caneta",
+        image: canetaApagavelBichinhos,
+        price: 6.0,
+        description: "",
+        models: [
+          {
+            text: "Pandinha",
+            isEnable: true,
+          },
+          {
+            text: "Porquinho",
+            isEnable: true,
+          },
+          {
+            text: "Gatinho",
+            isEnable: true,
+          },
+          {
+            text: "Ursinho",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "92",
+        name: "Caneta Apagavel Coracao E Pompom",
+        type: "caneta",
+        image: canetaApagavelCoracaoEPompom,
+        price: 1.0,
+        description: "",
+        models: [
+          {
+            text: "Pompom",
+            isEnable: true,
+          },
+          {
+            text: "Coração",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "93",
+        name: "Caneta Apagavel Criaturas Do Mar",
+        type: "caneta",
+        image: canetaApagavelCriaturasDoMar,
+        price: 1.0,
+        description: "",
+        models: [
+          {
+            text: "Azul Escuro",
+            isEnable: false,
+          },
+          {
+            text: "Azul Claro",
+            isEnable: false,
+          },
+          {
+            text: "Azul Bebê",
+            isEnable: false,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "94",
+        name: "Caneta Apagavel Pandas",
+        type: "caneta",
+        image: canetaApagavelPandas,
+        price: 6.0,
+        description: "",
+        models: [
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Branco",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "95",
+        name: "Caneta Cis Script",
+        type: "caneta",
+        image: canetaCisScript,
+        price: 2.5,
+        description: "",
+        models: [
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Preto",
+            isEnable: true,
+          },
+          {
+            text: "Vermelho",
+            isEnable: false,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "96",
+        name: "Caneta Esferografica Cis Lolipop",
+        type: "caneta",
+        image: canetaEsferograficaCisLolipop,
+        price: 2.2,
+        description: "",
+        models: [
+          {
+            text: "Azul claro",
+            isEnable: true,
+          },
+          {
+            text: "Azul Escuro",
+            isEnable: true,
+          },
+          {
+            text: "Vermelho",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Preto",
+            isEnable: true,
+          },
+          {
+            text: "Lilás",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "97",
+        name: "Caneta Esferografica Cis Minus 04",
+        type: "caneta",
+        image: canetaEsferograficaCisMinus04,
+        price: 3.3,
+        description: "",
+        models: [
+          {
+            text: "Laranja",
+            isEnable: true,
+          },
+          {
+            text: "Roxo",
+            isEnable: false,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Prata",
+            isEnable: false,
+          },
+          {
+            text: "Azul Claro",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "98",
+        name: "Caneta Esferografica Clicacel Super Colorida",
+        type: "caneta",
+        image: canetaEsferograficaClicacelSuperColorida,
+        price: 3.0,
+        description: "",
+        models: [
+          {
+            text: "Roxo com Verde",
+            isEnable: false,
+          },
+          {
+            text: "Azul com Rosa",
+            isEnable: false,
+          },
+          {
+            text: "Amarelo com Azul",
+            isEnable: false,
+          },
+          {
+            text: "Verde com Roxo",
+            isEnable: false,
+          },
+          {
+            text: "Rosa com Laranja",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "99",
+        name: "Caneta Esferografica Colorida",
+        type: "caneta",
+        image: canetaEsferograficaColorida,
+        price: 3.0,
+        description: "",
+        models: [
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Roxo",
+            isEnable: true,
+          },
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "100",
+        name: "Caneta Gatinhos",
+        type: "caneta",
+        image: canetaGatinhos,
+        price: 8.6,
+        description: "",
+        isInCatalog: false,
+      },
+      {
+        id: "101",
+        name: "Caneta Spiro Cis",
+        type: "caneta",
+        image: canetaSpiroCis,
+        price: 4.0,
+        description: "",
+        models: [
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Preto",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "102",
+        name: "Apontador Rapitores",
+        type: "apontador",
+        image: apontadorRapitores,
+        price: 11.9,
+        description: "",
+        models: [
+          {
+            text: "Rosa",
+            isEnable: false,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Lilás",
+            isEnable: false,
+          },
+          {
+            text: "Azul",
+            isEnable: false,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "103",
+        name: "Grafite Animais Fofos - ponta 0.7",
+        type: "grafite",
+        image: grafiteAnimaisFofos07,
+        price: 7,
+        description: "",
+        models: [
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Laranja",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "104",
+        name: "Grafite Lapiseira Troca Ponta Brw",
+        type: "grafite",
+        image: grafiteLapiseiraTrocaPontaBrw,
+        price: 4.5,
+        description: "",
+        models: [
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "105",
+        name: "Grafite Tons Leves - ponta 0.5",
+        type: "grafite",
+        image: grafiteTonsLeves05,
+        price: 5.2,
+        description: "",
+        models: [
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Lilás",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "106",
+        name: "Grafite Tom Pastel - ponta 0.7",
+        type: "grafite",
+        image: grafiteTonsLeves07,
+        price: 6,
+        description: "",
+        models: [
+          {
+            text: "Rosa",
+            isEnable: false,
+          },
+          {
+            text: "Lilás",
+            isEnable: true,
+          },
+          {
+            text: "Azul Escuro",
+            isEnable: false,
+          },
+          {
+            text: "Ciano",
+            isEnable: true,
+          },
+          {
+            text: "Azul Bebê",
+            isEnable: false,
+          },
+          {
+            text: "Nude",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "107",
+        name: "Grafite Trasparente Style Original - ponta 0.7",
+        type: "grafite",
+        image: grafiteTrasparenteStyleOriginal07,
+        price: 6.5,
+        description: "",
+        models: [
+          {
+            text: "Branco",
+            isEnable: false,
+          },
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: false,
+          },
+          {
+            text: "Verde",
             isEnable: true,
           },
         ],
