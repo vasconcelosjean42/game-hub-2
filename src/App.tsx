@@ -9,7 +9,7 @@ import colaBastaoHomemAranha from "./assets/produtos/cola-bastao-homem-aranha.we
 import lapisStitchAzul from "./assets/produtos/lapis/lapis-stitch-azul.webp";
 import lapisStitchRosa from "./assets/produtos/lapis/lapis-stitch-rosa.webp";
 import lapisVingadores from "./assets/produtos/lapis-vingadores.webp";
-import marcaTextoJoccar from "./assets/produtos/marca-texto-joccar.webp";
+// import marcaTextoJoccar from "./assets/produtos/marca-texto-joccar.webp";
 import marcaTextoPastelBRW from "./assets/produtos/marcaTexto/marca-texto-pastel-brw-02.webp";
 import postitAmararelo100 from "./assets/produtos/postit-amarelo-100.webp";
 import postitNeon50 from "./assets/produtos/postit-neon-50.webp";
@@ -29,7 +29,7 @@ import canetaFastFood from "./assets/produtos/canetas/caneta-fast-food.webp";
 import canetaFeras from "./assets/produtos/canetas/caneta-feras.webp";
 import canetaGamesApagavel from "./assets/produtos/canetas/caneta-games-apagavel.webp";
 import canetaGroot from "./assets/produtos/canetas/caneta-groot.webp";
-import canetaHidroPastelBrw from "./assets/produtos/canetas/caneta-hidro-pastel-brw.webp";
+//import canetaHidroPastelBrw from "./assets/produtos/canetas/caneta-hidro-pastel-brw.webp";
 import canetaManga from "./assets/produtos/canetas/caneta-manga.webp";
 import canetaOssinho from "./assets/produtos/canetas/caneta-ossinho.webp";
 import canetaPatinhas from "./assets/produtos/canetas/caneta-patinhas.webp";
@@ -48,11 +48,11 @@ import cadernoFridaVermelho from "./assets/produtos/cadernos/caderno-frida-verme
 import cadernoHardWork from "./assets/produtos/cadernos/caderno-hard-work.webp";
 import cadernoCraftcolorPapelao from "./assets/produtos/cadernos/caderno-craftcolor-papelao.webp";
 import cadernoStarWars from "./assets/produtos/cadernos/caderno-star-wars.webp";
-import borrachaCapaPlasticaColorida from "./assets/produtos/borracha/borracha-capa-plastica-colorida.webp";
-import borrachaCisMove from "./assets/produtos/borracha/borracha-cis-move.webp";
-import borrachaFoods from "./assets/produtos/borracha/borracha-foods.webp";
-import borrachaVingadores from "./assets/produtos/borracha/borracha-vingadores.webp";
-import borrachaPool from "./assets/produtos/borracha/borracha-pool.webp";
+import borrachaCapaPlasticaColorida from "./assets/produtos/borrachas/borracha-capa-plastica-colorida.webp";
+import borrachaCisMove from "./assets/produtos/borrachas/borracha-cis-move.webp";
+import borrachaFoods from "./assets/produtos/borrachas/borracha-foods.webp";
+import borrachaVingadores from "./assets/produtos/borrachas/borracha-vingadores.webp";
+import borrachaPool from "./assets/produtos/borrachas/borracha-pool.webp";
 import cadernoDisneyBabyYoda from "./assets/produtos/cadernos/caderno-disney-baby-yoda.webp";
 import cadernoDisneyCininho from "./assets/produtos/cadernos/caderno-disney-cininho.webp";
 import cadernoDisneyElza from "./assets/produtos/cadernos/caderno-disney-elza.webp";
@@ -74,7 +74,7 @@ import apontadorComDepositoSpiroCis from "./assets/produtos/apontadores/apontado
 import apontadorMinnie from "./assets/produtos/apontadores/apontador-minnie.webp";
 import apontadorSoulBrw from "./assets/produtos/apontadores/apontador-soul-brw.webp";
 import apontadorVingadores from "./assets/produtos/apontadores/apontador-vingadores.webp";
-import borrachaQuadraDaSpiroCis from "./assets/produtos/borracha/borracha-quadrada-spiro-cis.webp";
+import borrachaQuadraDaSpiroCis from "./assets/produtos/borrachas/borracha-quadrada-spiro-cis.webp";
 import canetaBorboletas from "./assets/produtos/canetas/caneta-borboletas.webp";
 import canetaFofaDocinhoPerfumadaEmGel from "./assets/produtos/canetas/caneta-fofa-docinho-perfumada-em-gel.webp";
 import canetaFofaNaruto from "./assets/produtos/canetas/caneta-fofa-naruto.webp";
@@ -107,12 +107,17 @@ import canetaEsferograficaColorida from "./assets/produtos/canetas/caneta-esfero
 import canetaGatinhos from "./assets/produtos/canetas/caneta-gatinhos.webp";
 import canetaSpiroCis from "./assets/produtos/canetas/caneta-spiro-cis.webp";
 import apontadorRapitores from "./assets/produtos/apontadores/apontador-rapitores.webp";
-
 import grafiteAnimaisFofos07 from "./assets/produtos/grafites/grafite-animais-fofos-07.webp";
 import grafiteLapiseiraTrocaPontaBrw from "./assets/produtos/grafites/grafite-lapiseira-troca-ponta-brw.webp";
 import grafiteTonsLeves05 from "./assets/produtos/grafites/grafite-tons-leves-05.webp";
 import grafiteTonsLeves07 from "./assets/produtos/grafites/grafite-tons-leves-07.webp";
 import grafiteTrasparenteStyleOriginal07 from "./assets/produtos/grafites/grafite-trasparente-style-original-07.webp";
+import tesouraComunColoridaWinPaper from "./assets/produtos/tesouras/tesoura-comun-colorida-win-paper.webp";
+import tesouraDePicotar from "./assets/produtos/tesouras/tesoura-de-picotar.webp";
+import borrachaTurmaDaMonica from "./assets/produtos/borrachas/borracha-turma-da-monica.webp";
+
+import marcaTextoGoodVibesJoccarOffice from "./assets/produtos/marcaTexto/marca-texto-good-vibes-joccar-office.webp";
+import marcaTextoPastelJoccarOffice from "./assets/produtos/marcaTexto/marca-texto-pastel-joccar-office.webp";
 
 import { FaRegCopy } from "react-icons/fa";
 
@@ -135,6 +140,8 @@ interface ICatalog {
   price: string;
   model?: string;
 }
+
+let prevScrollPoss = 0;
 
 function App() {
   const [products, setProducts] = useState<ProductProps[]>([]);
@@ -162,7 +169,7 @@ function App() {
       {
         id: "1",
         name: "Lápis Stich Azul Molin",
-        type: "lapis",
+        type: "Lápis",
         image: lapisStitchAzul,
         price: 3,
         description: "",
@@ -171,7 +178,7 @@ function App() {
       {
         id: "2",
         name: "Lápis Stich Rosa Molin",
-        type: "lapis",
+        type: "Lápis",
         image: lapisStitchRosa,
         price: 3,
         description: "",
@@ -180,7 +187,7 @@ function App() {
       {
         id: "3",
         name: "Lápis Vingadores Molin",
-        type: "lapis",
+        type: "Lápis",
         image: lapisVingadores,
         price: 3,
         description: "",
@@ -205,27 +212,44 @@ function App() {
         isInCatalog: false,
       },
       {
-        id: "4",
-        name: "Marca Texto Joccar",
-        type: "marca-texto",
-        image: marcaTextoJoccar,
-        price: 7,
-        description: "",
-        isInCatalog: false,
-      },
-      {
         id: "5",
         name: "Marca Texto Pastel BRW",
-        type: "marca-texto",
+        type: "Marca Texto",
         image: marcaTextoPastelBRW,
         price: 4.2,
         description: "",
+        models: [
+          {
+            text: "Rosa Bebê",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Laranja",
+            isEnable: true,
+          },
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
         id: "6",
         name: "Post-it Amarelo",
-        type: "postit",
+        type: "Post-it",
         image: postitAmararelo100,
         price: 7.5,
         description: "100 folhas",
@@ -234,7 +258,7 @@ function App() {
       {
         id: "7",
         name: "Post-it Neon",
-        type: "postit",
+        type: "Post-it",
         image: postitNeon50,
         price: 7.4,
         description: "50 folhas",
@@ -269,7 +293,7 @@ function App() {
       {
         id: "8",
         name: "Post-it Pautado",
-        type: "postit",
+        type: "Post-it",
         image: postitPalta50,
         price: 6.5,
         description: "50 folhas",
@@ -278,7 +302,7 @@ function App() {
       {
         id: "9",
         name: "Post-it Preto",
-        type: "postit",
+        type: "Post-it",
         image: postitPreto,
         price: 8.5,
         description: "50 folhas",
@@ -287,7 +311,7 @@ function App() {
       {
         id: "10",
         name: "Cola Bastao Homem Aranha",
-        type: "cola-bastao",
+        type: "Colas Bastão",
         image: colaBastaoHomemAranha,
         price: 5.6,
         description: "Cola bastão Molin, 9g",
@@ -296,7 +320,7 @@ function App() {
       {
         id: "11",
         name: "Lápis Tilibra Happy",
-        type: "lapis",
+        type: "Lápis",
         image: lapisTilibraHappy,
         price: 2.2,
         description: "",
@@ -323,7 +347,7 @@ function App() {
       {
         id: "12",
         name: "Lápis Cis Move",
-        type: "lapis",
+        type: "Lápis",
         image: lapisCisMove,
         price: 1.9,
         description: "[Item sortido]",
@@ -332,7 +356,7 @@ function App() {
       {
         id: "13",
         name: "Post-it Tom Pastel",
-        type: "postit",
+        type: "Post-it",
         image: postitPastel50,
         price: 7,
         description: "50 folhas",
@@ -363,7 +387,7 @@ function App() {
       {
         id: "14",
         name: "Caneta Abacate",
-        type: "caneta",
+        type: "Canetas",
         image: canetaAbacate,
         price: 6,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -372,7 +396,7 @@ function App() {
       {
         id: "15",
         name: "Caneta Bambu Panda",
-        type: "caneta",
+        type: "Canetas",
         image: canetaBambuPanda,
         price: 5.5,
         description: "Caneta em gel, clicável e com a escrita na cor preta",
@@ -381,7 +405,7 @@ function App() {
       {
         id: "16",
         name: "Caneta Bob Esponja",
-        type: "caneta",
+        type: "Canetas",
         image: canetaBobEsponja,
         price: 10,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -390,7 +414,7 @@ function App() {
       {
         id: "17",
         name: "Caneta Borboletas",
-        type: "caneta",
+        type: "Canetas",
         image: canetaBorboletas,
         price: 8.6,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -417,7 +441,7 @@ function App() {
       {
         id: "18",
         name: "Caneta Cactu Cute",
-        type: "caneta",
+        type: "Canetas",
         image: canetaCactuCute,
         price: 6,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -426,7 +450,7 @@ function App() {
       {
         id: "19",
         name: "Caneta Cactu",
-        type: "caneta",
+        type: "Canetas",
         image: canetaCactu,
         price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -435,7 +459,7 @@ function App() {
       {
         id: "20",
         name: "Caneta Cactu Nordeste",
-        type: "caneta",
+        type: "Canetas",
         image: canetaCactuNordeste,
         price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -444,7 +468,7 @@ function App() {
       {
         id: "21",
         name: "Caneta Esferografica Brw",
-        type: "caneta",
+        type: "Canetas",
         image: canetaEsferograficaBrw,
         price: 9,
         description: "Caneta esferográfica, ponta fina, na escrita azul",
@@ -471,7 +495,7 @@ function App() {
       {
         id: "22",
         name: "Caneta FastFood",
-        type: "caneta",
+        type: "Canetas",
         image: canetaFastFood,
         price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -498,7 +522,7 @@ function App() {
       {
         id: "23",
         name: "Caneta Feras",
-        type: "caneta",
+        type: "Canetas",
         image: canetaFeras,
         price: 9,
         description:
@@ -508,7 +532,7 @@ function App() {
       {
         id: "24",
         name: "Caneta Games Apagável",
-        type: "caneta",
+        type: "Canetas",
         image: canetaGamesApagavel,
         price: 9,
         description: "Caneta apagável, cor azul, brw",
@@ -527,7 +551,7 @@ function App() {
       {
         id: "25",
         name: "Caneta Groot",
-        type: "caneta",
+        type: "Canetas",
         image: canetaGroot,
         price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -536,7 +560,7 @@ function App() {
       // {
       //   id: "26",
       //   name: "Caneta Hidrográfica Pastel Brw",
-      //   type: "caneta",
+      //   type: "Canetas",
       //   image: canetaHidroPastelBrw,
       //   price: 9,
       //   description: "Caneta hidrográfica, ponta 0.4mm, tom pastel",
@@ -545,7 +569,7 @@ function App() {
       {
         id: "27",
         name: "Caneta Manga",
-        type: "caneta",
+        type: "Canetas",
         image: canetaManga,
         price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -554,7 +578,7 @@ function App() {
       {
         id: "28",
         name: "Caneta Ossinho",
-        type: "caneta",
+        type: "Canetas",
         image: canetaOssinho,
         price: 9,
         description:
@@ -586,7 +610,7 @@ function App() {
       {
         id: "29",
         name: "Caneta Patinhas",
-        type: "caneta",
+        type: "Canetas",
         image: canetaPatinhas,
         price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -595,25 +619,77 @@ function App() {
       {
         id: "30",
         name: "Caneta Retro",
-        type: "caneta",
+        type: "Canetas",
         image: canetaRetro,
         price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        models: [
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Preto",
+            isEnable: true,
+          },
+          {
+            text: "Vermelho",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Roxo",
+            isEnable: true,
+          },
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
         id: "31",
         name: "Caneta Retro Ursos",
-        type: "caneta",
+        type: "Canetas",
         image: canetaRetroUrsos,
         price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        models: [
+          {
+            text: "Modelo 1",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 2",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 3",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 4",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 5",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 6",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
         id: "32",
         name: "Caneta Saturno",
-        type: "caneta",
+        type: "Canetas",
         image: canetaSaturno,
         price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -640,7 +716,7 @@ function App() {
       {
         id: "33",
         name: "Caneta Seringa",
-        type: "caneta",
+        type: "Canetas",
         image: canetaSeringa,
         price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -649,7 +725,7 @@ function App() {
       {
         id: "34",
         name: "Caderno Harry Potter Listras das Casas",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoHarryPotterListaCasas,
         price: 49.9,
         description:
@@ -659,7 +735,7 @@ function App() {
       {
         id: "35",
         name: "Caderno Harry Potter Brasao das Casas",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoHarryPotterBrasaoCasas,
         price: 49.9,
         description:
@@ -669,7 +745,7 @@ function App() {
       {
         id: "36",
         name: "Caderno Joaninhas",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoSemAdesivoJoaninhas,
         price: 25,
         description:
@@ -679,7 +755,7 @@ function App() {
       {
         id: "37",
         name: "Caderno Cachorrinhos",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoSemAdesivoCachorrinhos,
         price: 25,
         description:
@@ -689,7 +765,7 @@ function App() {
       {
         id: "38",
         name: "Caderno Flores",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoSemAdesivoFlores,
         price: 25,
         description:
@@ -699,7 +775,7 @@ function App() {
       {
         id: "39",
         name: "Caderno Coracões Doce",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoSemadesivocoracoesdoce,
         price: 25,
         description:
@@ -709,7 +785,7 @@ function App() {
       {
         id: "40",
         name: "Caderno Frida Kahlo Vermelho",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoFridaVermelho,
         price: 45,
         description:
@@ -719,7 +795,7 @@ function App() {
       {
         id: "41",
         name: "Caderno Hard Work",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoHardWork,
         price: 35,
         description:
@@ -729,7 +805,7 @@ function App() {
       {
         id: "42",
         name: "Caderno Craftcolor Papelão",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoCraftcolorPapelao,
         price: 40,
         description:
@@ -739,7 +815,7 @@ function App() {
       {
         id: "43",
         name: "Caderno Star Wars",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoStarWars,
         price: 38,
         description:
@@ -749,7 +825,7 @@ function App() {
       {
         id: "44",
         name: "Caneta Xadrez",
-        type: "caneta",
+        type: "Canetas",
         image: canetaXadrez,
         price: 5.8,
         description:
@@ -785,16 +861,34 @@ function App() {
       {
         id: "45",
         name: "Borracha Capa Plastica Colorida",
-        type: "borracha",
+        type: "Borrachas",
         image: borrachaCapaPlasticaColorida,
         price: 2.4,
         description: "",
+        models: [
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+          {
+            text: "Laranja",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Vermelho",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
         id: "46",
         name: "Borracha Cis Move",
-        type: "borracha",
+        type: "Borrachas",
         image: borrachaCisMove,
         price: 3.6,
         description: "",
@@ -817,7 +911,7 @@ function App() {
       {
         id: "47",
         name: "Borracha Foods",
-        type: "borracha",
+        type: "Borrachas",
         image: borrachaFoods,
         price: 3.2,
         description: "",
@@ -844,16 +938,34 @@ function App() {
       {
         id: "48",
         name: "Borracha Vingadores",
-        type: "borracha",
+        type: "Borrachas",
         image: borrachaVingadores,
         price: 4.5,
         description: "",
+        models: [
+          {
+            text: "Cinza",
+            isEnable: true,
+          },
+          {
+            text: "Vermelho",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Preto",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
         id: "49",
         name: "Borracha Ursinho Pool",
-        type: "borracha",
+        type: "Borrachas",
         image: borrachaPool,
         price: 2.9,
         description: "",
@@ -876,7 +988,7 @@ function App() {
       {
         id: "50",
         name: "Caderno Disney Baby Yoda",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoDisneyBabyYoda,
         price: 41.9,
         description:
@@ -886,7 +998,7 @@ function App() {
       {
         id: "51",
         name: "Caderno Disney Cininho",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoDisneyCininho,
         price: 41.9,
         description:
@@ -896,7 +1008,7 @@ function App() {
       {
         id: "52",
         name: "Caderno Disney Elza",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoDisneyElza,
         price: 41.9,
         description:
@@ -906,7 +1018,7 @@ function App() {
       {
         id: "53",
         name: "Caderno Disney Olaf",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoDisneyOlaf,
         price: 41.9,
         description:
@@ -916,7 +1028,7 @@ function App() {
       {
         id: "54",
         name: "Caderno Harry Potter Brasao Escolas",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoHarryPotterBrasaoEscolas,
         price: 39.9,
         description:
@@ -926,7 +1038,7 @@ function App() {
       {
         id: "55",
         name: "Caderno Harry Potter Defesa Contra Artes Das Trevas",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoHarryPotterDefesaContraArtesDasTrevas,
         price: 39.9,
         description:
@@ -936,7 +1048,7 @@ function App() {
       {
         id: "56",
         name: "Caderno House Of Dragon Brasao Do Dragao",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoHouseOfDragonBrasaoDoDragao,
         price: 41.2,
         description:
@@ -946,7 +1058,7 @@ function App() {
       {
         id: "57",
         name: "Caderno House Of Dragon Dragao E Espada",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoHouseOfDragonDragaoEEspada,
         price: 41.2,
         description:
@@ -956,7 +1068,7 @@ function App() {
       {
         id: "58",
         name: "Caderno House Of Dragon Fire Will Reign",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoHouseOfDragonFireWillReign,
         price: 41.2,
         description:
@@ -966,7 +1078,7 @@ function App() {
       {
         id: "59",
         name: "Caderno House Of Dragon You Win Or You Die",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoHouseOfDragonYouWinOrYouDie,
         price: 41.2,
         description:
@@ -976,7 +1088,7 @@ function App() {
       {
         id: "60",
         name: "Caderno Marmorizado Be Authentic",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoMarbleBeAuthentic,
         price: 35.9,
         description:
@@ -986,7 +1098,7 @@ function App() {
       {
         id: "61",
         name: "Caderno Marmorizado Beautiful Be You",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoMarbleBeautifulBeYou,
         price: 35.9,
         description:
@@ -996,7 +1108,7 @@ function App() {
       {
         id: "62",
         name: "Caderno Marmorizado Dream The Impossible",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoMarbleDreamTheImpossible,
         price: 35.9,
         description:
@@ -1006,7 +1118,7 @@ function App() {
       {
         id: "63",
         name: "Caderno Marmorizado Lovely Strong",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoMarbleLovelyStrong,
         price: 35.9,
         description:
@@ -1016,7 +1128,7 @@ function App() {
       {
         id: "64",
         name: "Caderno Rick And Morty Cabeca Do Morty",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoRickAndMortyCabecaDoMorty,
         price: 41.2,
         description:
@@ -1026,7 +1138,7 @@ function App() {
       {
         id: "65",
         name: "Caderno Rick And Morty Foco Na Ciencia",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoRickAndMortyFocoNaCiencia,
         price: 41.2,
         description:
@@ -1036,7 +1148,7 @@ function App() {
       {
         id: "66",
         name: "Caderno Rick And Morty Portal Rick And Morty",
-        type: "caderno",
+        type: "Cadernos",
         image: cadernoRickAndMortyPortalRickAndMorty,
         price: 41.2,
         description:
@@ -1046,7 +1158,7 @@ function App() {
       {
         id: "67",
         name: "Apontador Com Deposito Spiro Cis",
-        type: "apontador",
+        type: "Apontadores",
         image: apontadorComDepositoSpiroCis,
         price: 4,
         description: "",
@@ -1081,7 +1193,7 @@ function App() {
       {
         id: "68",
         name: "Apontador Minnie",
-        type: "apontador",
+        type: "Apontadores",
         image: apontadorMinnie,
         price: 4.2,
         description: "",
@@ -1100,7 +1212,7 @@ function App() {
       {
         id: "69",
         name: "Apontador Soul Brw",
-        type: "apontador",
+        type: "Apontadores",
         image: apontadorSoulBrw,
         price: 3.15,
         description: "",
@@ -1127,7 +1239,7 @@ function App() {
       {
         id: "70",
         name: "Apontador Vingadores",
-        type: "apontador",
+        type: "Apontadores",
         image: apontadorVingadores,
         price: 4.2,
         description: "",
@@ -1154,7 +1266,7 @@ function App() {
       {
         id: "71",
         name: "Borracha Quadra da Spiro Cis",
-        type: "borracha",
+        type: "Borrachas",
         image: borrachaQuadraDaSpiroCis,
         price: 4,
         description: "",
@@ -1185,7 +1297,7 @@ function App() {
       {
         id: "72",
         name: "Caneta Fofa Docinho Perfumada Em Gel",
-        type: "caneta",
+        type: "Canetas",
         image: canetaFofaDocinhoPerfumadaEmGel,
         price: 9.5,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -1212,7 +1324,7 @@ function App() {
       {
         id: "73",
         name: "Caneta Fofa Naruto",
-        type: "caneta",
+        type: "Canetas",
         image: canetaFofaNaruto,
         price: 8.6,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -1239,7 +1351,7 @@ function App() {
       {
         id: "74",
         name: "Caneta Garfield",
-        type: "caneta",
+        type: "Canetas",
         image: canetaGarfield,
         price: 7,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
@@ -1248,7 +1360,7 @@ function App() {
       {
         id: "75",
         name: "Caneta Seringa com Líquido Colorido",
-        type: "caneta",
+        type: "Canetas",
         image: canetaSeringa02,
         price: 7.5,
         description:
@@ -1427,7 +1539,7 @@ function App() {
             isEnable: false,
           },
           {
-            text: "laranja",
+            text: "Laranja",
             isEnable: false,
           },
           {
@@ -1440,7 +1552,7 @@ function App() {
       {
         id: "82",
         name: "Grampeador Brw Tons Pastel",
-        type: "grampeadores",
+        type: "Grampeadores",
         image: grampeadorBrwTonsPastel,
         price: 14,
         description: "",
@@ -1466,8 +1578,8 @@ function App() {
       },
       {
         id: "83",
-        name: "Caneta Hb Spiro Cis",
-        type: "lapis",
+        name: "Lápis Hb Spiro Cis",
+        type: "Lápis",
         image: lapisHbSpiroCis,
         price: 1.9,
         description: "",
@@ -1498,7 +1610,7 @@ function App() {
       {
         id: "84",
         name: "Lapis West Village",
-        type: "lapis",
+        type: "Lápis",
         image: lapisWestVillage,
         price: 2.2,
         description: "",
@@ -1507,16 +1619,38 @@ function App() {
       {
         id: "85",
         name: "Marca Texto Com Glitter",
-        type: "marca-texto",
+        type: "Marca Texto",
         image: marcaTextoComGlitter,
         price: 8,
         description: "",
+        models: [
+          {
+            text: "Vermelho",
+            isEnable: true,
+          },
+          {
+            text: "Laranja",
+            isEnable: true,
+          },
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
         id: "86",
         name: "Marca Texto Em Gel",
-        type: "marca-texto",
+        type: "Marca Texto",
         image: marcaTextoEmGel,
         price: 6.2,
         description: "",
@@ -1539,7 +1673,7 @@ function App() {
       {
         id: "87",
         name: "Marca Texto Ponta Dupla",
-        type: "marca-texto",
+        type: "Marca Texto",
         image: marcaTextoPontaDupla,
         price: 5,
         description: "",
@@ -1574,7 +1708,7 @@ function App() {
       {
         id: "88",
         name: "Marca Texto Ursinhos",
-        type: "marca-texto",
+        type: "Marca Texto",
         image: marcaTextoUrsinhos,
         price: 2.2,
         description: "",
@@ -1609,7 +1743,7 @@ function App() {
       {
         id: "89",
         name: "Marca Texto Apagável",
-        type: "marca-texto",
+        type: "Marca Texto",
         image: marcaTextoApagavel,
         price: 4.15,
         description: "",
@@ -1636,7 +1770,7 @@ function App() {
       {
         id: "90",
         name: "Caneta Apagavel Astronautas",
-        type: "caneta",
+        type: "Canetas",
         image: canetaApagavelAstronautas,
         price: 6.0,
         description: "",
@@ -1659,7 +1793,7 @@ function App() {
       {
         id: "91",
         name: "Caneta Apagavel Bichinhos",
-        type: "caneta",
+        type: "Canetas",
         image: canetaApagavelBichinhos,
         price: 6.0,
         description: "",
@@ -1686,7 +1820,7 @@ function App() {
       {
         id: "92",
         name: "Caneta Apagavel Coracao E Pompom",
-        type: "caneta",
+        type: "Canetas",
         image: canetaApagavelCoracaoEPompom,
         price: 1.0,
         description: "",
@@ -1705,7 +1839,7 @@ function App() {
       {
         id: "93",
         name: "Caneta Apagavel Criaturas Do Mar",
-        type: "caneta",
+        type: "Canetas",
         image: canetaApagavelCriaturasDoMar,
         price: 1.0,
         description: "",
@@ -1732,7 +1866,7 @@ function App() {
       {
         id: "94",
         name: "Caneta Apagavel Pandas",
-        type: "caneta",
+        type: "Canetas",
         image: canetaApagavelPandas,
         price: 6.0,
         description: "",
@@ -1755,7 +1889,7 @@ function App() {
       {
         id: "95",
         name: "Caneta Cis Script",
-        type: "caneta",
+        type: "Canetas",
         image: canetaCisScript,
         price: 2.5,
         description: "",
@@ -1778,7 +1912,7 @@ function App() {
       {
         id: "96",
         name: "Caneta Esferografica Cis Lolipop",
-        type: "caneta",
+        type: "Canetas",
         image: canetaEsferograficaCisLolipop,
         price: 2.2,
         description: "",
@@ -1813,7 +1947,7 @@ function App() {
       {
         id: "97",
         name: "Caneta Esferografica Cis Minus 04",
-        type: "caneta",
+        type: "Canetas",
         image: canetaEsferograficaCisMinus04,
         price: 3.3,
         description: "",
@@ -1844,7 +1978,7 @@ function App() {
       {
         id: "98",
         name: "Caneta Esferografica Clicacel Super Colorida",
-        type: "caneta",
+        type: "Canetas",
         image: canetaEsferograficaClicacelSuperColorida,
         price: 3.0,
         description: "",
@@ -1875,7 +2009,7 @@ function App() {
       {
         id: "99",
         name: "Caneta Esferografica Colorida",
-        type: "caneta",
+        type: "Canetas",
         image: canetaEsferograficaColorida,
         price: 3.0,
         description: "",
@@ -1906,7 +2040,7 @@ function App() {
       {
         id: "100",
         name: "Caneta Gatinhos",
-        type: "caneta",
+        type: "Canetas",
         image: canetaGatinhos,
         price: 8.6,
         description: "",
@@ -1915,7 +2049,7 @@ function App() {
       {
         id: "101",
         name: "Caneta Spiro Cis",
-        type: "caneta",
+        type: "Canetas",
         image: canetaSpiroCis,
         price: 4.0,
         description: "",
@@ -1934,7 +2068,7 @@ function App() {
       {
         id: "102",
         name: "Apontador Rapitores",
-        type: "apontador",
+        type: "Apontadores",
         image: apontadorRapitores,
         price: 11.9,
         description: "",
@@ -1961,7 +2095,7 @@ function App() {
       {
         id: "103",
         name: "Grafite Animais Fofos - ponta 0.7",
-        type: "grafite",
+        type: "Grafites",
         image: grafiteAnimaisFofos07,
         price: 7,
         description: "",
@@ -1988,7 +2122,7 @@ function App() {
       {
         id: "104",
         name: "Grafite Lapiseira Troca Ponta Brw",
-        type: "grafite",
+        type: "Grafites",
         image: grafiteLapiseiraTrocaPontaBrw,
         price: 4.5,
         description: "",
@@ -2015,7 +2149,7 @@ function App() {
       {
         id: "105",
         name: "Grafite Tons Leves - ponta 0.5",
-        type: "grafite",
+        type: "Grafites",
         image: grafiteTonsLeves05,
         price: 5.2,
         description: "",
@@ -2042,7 +2176,7 @@ function App() {
       {
         id: "106",
         name: "Grafite Tom Pastel - ponta 0.7",
-        type: "grafite",
+        type: "Grafites",
         image: grafiteTonsLeves07,
         price: 6,
         description: "",
@@ -2077,7 +2211,7 @@ function App() {
       {
         id: "107",
         name: "Grafite Trasparente Style Original - ponta 0.7",
-        type: "grafite",
+        type: "Grafites",
         image: grafiteTrasparenteStyleOriginal07,
         price: 6.5,
         description: "",
@@ -2101,7 +2235,192 @@ function App() {
         ],
         isInCatalog: false,
       },
+      {
+        id: "108",
+        name: "Tesoura Comun Colorida Win Paper",
+        type: "Tesouras",
+        image: tesouraComunColoridaWinPaper,
+        price: 6,
+        description: "",
+        models: [
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "109",
+        name: "Tesoura De Picotar",
+        type: "Tesouras",
+        image: tesouraDePicotar,
+        price: 8.5,
+        description: "",
+        models: [
+          {
+            text: "Modelo 1",
+            isEnable: false,
+          },
+          {
+            text: "Modelo 2",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 3",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 4",
+            isEnable: false,
+          },
+          {
+            text: "Modelo 5",
+            isEnable: false,
+          },
+          {
+            text: "Modelo 6",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "110",
+        name: "Borracha Turma Da Monica",
+        type: "Borrachas",
+        image: borrachaTurmaDaMonica,
+        price: 2.5,
+        description: "",
+        models: [
+          {
+            text: "Cascão",
+            isEnable: true,
+          },
+          {
+            text: "Magali",
+            isEnable: false,
+          },
+          {
+            text: "Cebolinha",
+            isEnable: false,
+          },
+          {
+            text: "Mônica",
+            isEnable: true,
+          },
+          {
+            text: "Milena",
+            isEnable: true,
+          },
+          {
+            text: "Jeremias",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "111",
+        name: "Marca Texto Good Vibes Joccar Office",
+        type: "Marca Texto",
+        image: marcaTextoGoodVibesJoccarOffice,
+        price: 7,
+        description: "",
+        models: [
+          {
+            text: "Vermelho",
+            isEnable: false,
+          },
+          {
+            text: "Ciano",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Rosa Nude",
+            isEnable: true,
+          },
+          {
+            text: "Laranja",
+            isEnable: true,
+          },
+          {
+            text: "Cinza",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "112",
+        name: "Marca Texto Pastel Joccar Office",
+        type: "Marca Texto",
+        image: marcaTextoPastelJoccarOffice,
+        price: 7,
+        description: "",
+        models: [
+          {
+            text: "Lilás",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: false,
+          },
+          {
+            text: "Laranja",
+            isEnable: false,
+          },
+          {
+            text: "Amarelo",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: false,
+          },
+        ],
+        isInCatalog: false,
+      },
     ]);
+  }, []);
+
+  useEffect(() => {
+    console.log("teste");
+
+    const navbar = document.getElementById("navbar");
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      if (navbar) {
+        if (prevScrollPoss < currentScrollPos && currentScrollPos > 50) {
+          navbar.style.top = "-80px";
+        } else {
+          navbar.style.top = "0";
+        }
+      }
+      prevScrollPoss = currentScrollPos;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   useLayoutEffect(() => {
@@ -2183,7 +2502,11 @@ function App() {
           product.name.toLowerCase() + " === " + search.toLowerCase()
         );
 
-        return product.name.toLowerCase().includes(search.toLowerCase());
+        return product.name
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .includes(search.toLowerCase());
       });
       console.log(newProducts);
       return newProducts;
@@ -2193,20 +2516,25 @@ function App() {
 
   return (
     <>
-      <div className="w-full min-h-dvh bg-slate-300 p-4">
-        <div className="flex justify-center items-center px-0 sm:px-28">
+      <div className="w-full min-h-dvh bg-slate-200 p-4">
+        <div
+          id="navbar"
+          className="flex fixed w-[100%] transition-[top] ease-in-out delay-50 duration-500 bg-slate-300 justify-center items-center py-2  px-5 sm:px-28 right-0 top-0"
+        >
           <img className="w-24 mr-4" src={florDePapelLogo} />
           <div className="flex w-full sm:w-1/2 h-8 px-2 rounded-lg bg-slate-50 justify-center items-center">
             <IoSearchOutline />
             <input
-              className={"w-full h-4 px-2 bg-transparent outline-0"}
+              className={
+                "w-full h-8 px-2 bg-transparent outline-0 focus:outline-none"
+              }
               type="search"
               placeholder="Procurar produto..."
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
         </div>
-        <div className="flex">
+        <div className="flex mt-16">
           {/* <div className="aside w-full hidden lg:block bg-blue-400">aside</div> */}
           <div className="main w-full ">
             <ul>
