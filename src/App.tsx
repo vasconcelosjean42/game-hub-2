@@ -119,6 +119,14 @@ import borrachaTurmaDaMonica from "./assets/produtos/borrachas/borracha-turma-da
 import marcaTextoGoodVibesJoccarOffice from "./assets/produtos/marcaTexto/marca-texto-good-vibes-joccar-office.webp";
 import marcaTextoPastelJoccarOffice from "./assets/produtos/marcaTexto/marca-texto-pastel-joccar-office.webp";
 
+import postitTransparente50 from "./assets/produtos/postit/postit-transparente-50.webp";
+import postitMiniJoccarOffice from "./assets/produtos/postit/postit-mini-joccar-office.webp";
+import postitMarcaPagina from "./assets/produtos/postit/post-it-marca-pagina.webp";
+
+import colaBastaoBRW9G from "./assets/produtos/colasBastao/cola-bastao-brw-9g.webp";
+
+import canetaFofa10CoresBRW from "./assets/produtos/canetas/caneta-fofa-10-cores-brw.webp";
+
 import { FaRegCopy } from "react-icons/fa";
 
 export interface ProductProps {
@@ -168,7 +176,7 @@ function App() {
     setProducts([
       {
         id: "1",
-        name: "Lápis Stich Azul Molin",
+        name: "Lápis Stitch Azul - Molin",
         type: "Lápis",
         image: lapisStitchAzul,
         price: 3,
@@ -177,7 +185,7 @@ function App() {
       },
       {
         id: "2",
-        name: "Lápis Stich Rosa Molin",
+        name: "Lápis Stitch Rosa - Molin",
         type: "Lápis",
         image: lapisStitchRosa,
         price: 3,
@@ -186,7 +194,7 @@ function App() {
       },
       {
         id: "3",
-        name: "Lápis Vingadores Molin",
+        name: "Lápis Vingadores - Molin",
         type: "Lápis",
         image: lapisVingadores,
         price: 3,
@@ -213,15 +221,15 @@ function App() {
       },
       {
         id: "5",
-        name: "Marca Texto Pastel BRW",
+        name: "Marca Texto Tom Pastel - BRW",
         type: "Marca Texto",
         image: marcaTextoPastelBRW,
         price: 4.2,
         description: "",
         models: [
           {
-            text: "Rosa Bebê",
-            isEnable: true,
+            text: "Lilás",
+            isEnable: false,
           },
           {
             text: "Rosa",
@@ -248,20 +256,20 @@ function App() {
       },
       {
         id: "6",
-        name: "Post-it Amarelo",
+        name: "Post-it Amarelo - Stickote",
         type: "Post-it",
         image: postitAmararelo100,
         price: 7.5,
-        description: "100 folhas",
+        description: "100 folhas - 76x76mm",
         isInCatalog: false,
       },
       {
         id: "7",
-        name: "Post-it Neon",
+        name: "Post-it Neon - Importado",
         type: "Post-it",
         image: postitNeon50,
         price: 7.4,
-        description: "50 folhas",
+        description: "50 folhas - 76x76mm",
         models: [
           {
             text: "Laranja",
@@ -273,7 +281,7 @@ function App() {
           },
           {
             text: "Verde",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Azul",
@@ -285,18 +293,18 @@ function App() {
           },
           {
             text: "Rosa",
-            isEnable: true,
+            isEnable: false,
           },
         ],
         isInCatalog: false,
       },
       {
         id: "8",
-        name: "Post-it Pautado",
+        name: "Post-it Pautado - Smart Note",
         type: "Post-it",
         image: postitPalta50,
         price: 6.5,
-        description: "50 folhas",
+        description: "50 folhas - 76x76mm",
         isInCatalog: false,
       },
       {
@@ -310,7 +318,7 @@ function App() {
       },
       {
         id: "10",
-        name: "Cola Bastao Homem Aranha",
+        name: "Cola Bastao Homem Aranha - Molin",
         type: "Colas Bastão",
         image: colaBastaoHomemAranha,
         price: 5.6,
@@ -319,7 +327,7 @@ function App() {
       },
       {
         id: "11",
-        name: "Lápis Tilibra Happy",
+        name: "Lápis Happy - Tilibra",
         type: "Lápis",
         image: lapisTilibraHappy,
         price: 2.2,
@@ -327,7 +335,7 @@ function App() {
         models: [
           {
             text: "Lavanda",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Rosa",
@@ -351,15 +359,33 @@ function App() {
         image: lapisCisMove,
         price: 1.9,
         description: "[Item sortido]",
+        models: [
+          {
+            text: "Verde - Azul",
+            isEnable: true,
+          },
+          {
+            text: "Azul - Roxo",
+            isEnable: false,
+          },
+          {
+            text: "Rosa - Roxo",
+            isEnable: true,
+          },
+          {
+            text: "Laranja - Rosa",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
         id: "13",
-        name: "Post-it Tom Pastel",
+        name: "Post-it Tom Pastel - Importado",
         type: "Post-it",
         image: postitPastel50,
         price: 7,
-        description: "50 folhas",
+        description: "50 folhas - 76x76mm",
         models: [
           {
             text: "Lavanda",
@@ -371,7 +397,7 @@ function App() {
           },
           {
             text: "Rosa",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Verde",
@@ -395,7 +421,7 @@ function App() {
       },
       {
         id: "15",
-        name: "Caneta Bambu Panda",
+        name: "Caneta Bambu Pandinha",
         type: "Canetas",
         image: canetaBambuPanda,
         price: 5.5,
@@ -407,7 +433,7 @@ function App() {
         name: "Caneta Bob Esponja",
         type: "Canetas",
         image: canetaBobEsponja,
-        price: 10,
+        price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
         isInCatalog: false,
       },
@@ -440,7 +466,7 @@ function App() {
       },
       {
         id: "18",
-        name: "Caneta Cactu Cute",
+        name: "Caneta Cacto Cute",
         type: "Canetas",
         image: canetaCactuCute,
         price: 6,
@@ -449,7 +475,7 @@ function App() {
       },
       {
         id: "19",
-        name: "Caneta Cactu",
+        name: "Caneta Cacto",
         type: "Canetas",
         image: canetaCactu,
         price: 9,
@@ -458,7 +484,7 @@ function App() {
       },
       {
         id: "20",
-        name: "Caneta Cactu Nordeste",
+        name: "Caneta Cacto Mandacaru",
         type: "Canetas",
         image: canetaCactuNordeste,
         price: 9,
@@ -497,7 +523,7 @@ function App() {
         name: "Caneta FastFood",
         type: "Canetas",
         image: canetaFastFood,
-        price: 9,
+        price: 8.6,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
         models: [
           {
@@ -581,8 +607,7 @@ function App() {
         type: "Canetas",
         image: canetaOssinho,
         price: 9,
-        description:
-          "[consultar modelo disponível] Caneta esferográfica, escrita em cor azul",
+        description: "Caneta esferográfica, escrita em cor azul",
         models: [
           {
             text: "1. Osso do Dedo",
@@ -614,6 +639,24 @@ function App() {
         image: canetaPatinhas,
         price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        models: [
+          {
+            text: "Preto com Patinha Azul",
+            isEnable: true,
+          },
+          {
+            text: "Branco com Patinha Preta",
+            isEnable: true,
+          },
+          {
+            text: "Preto com Patinha Branca",
+            isEnable: false,
+          },
+          {
+            text: "Branco com Patinha Rosa",
+            isEnable: false,
+          },
+        ],
         isInCatalog: false,
       },
       {
@@ -688,10 +731,10 @@ function App() {
       },
       {
         id: "32",
-        name: "Caneta Saturno",
+        name: "Caneta Anel de Saturno",
         type: "Canetas",
         image: canetaSaturno,
-        price: 9,
+        price: 8.6,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
         models: [
           {
@@ -699,11 +742,11 @@ function App() {
             isEnable: true,
           },
           {
-            text: "Verde",
+            text: "Azul Claro",
             isEnable: true,
           },
           {
-            text: "Azul",
+            text: "Azul Escuro",
             isEnable: true,
           },
           {
@@ -715,11 +758,29 @@ function App() {
       },
       {
         id: "33",
-        name: "Caneta Seringa",
+        name: "Caneta Seringa Tom Pastel",
         type: "Canetas",
         image: canetaSeringa,
-        price: 9,
+        price: 8,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        models: [
+          {
+            text: "Roxo",
+            isEnable: false,
+          },
+          {
+            text: "Branco",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: false,
+          },
+        ],
         isInCatalog: false,
       },
       {
@@ -1296,7 +1357,7 @@ function App() {
       },
       {
         id: "72",
-        name: "Caneta Fofa Docinho Perfumada Em Gel",
+        name: "Caneta Fofa Docinho Perfumada",
         type: "Canetas",
         image: canetaFofaDocinhoPerfumadaEmGel,
         price: 9.5,
@@ -1326,7 +1387,7 @@ function App() {
         name: "Caneta Fofa Naruto",
         type: "Canetas",
         image: canetaFofaNaruto,
-        price: 8.6,
+        price: 9,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
         models: [
           {
@@ -1372,7 +1433,7 @@ function App() {
           },
           {
             text: "Azul",
-            isEnable: false,
+            isEnable: true,
           },
           {
             text: "Amarela",
@@ -1578,18 +1639,14 @@ function App() {
       },
       {
         id: "83",
-        name: "Lápis Hb Spiro Cis",
+        name: "Lápis Spiro Cis",
         type: "Lápis",
         image: lapisHbSpiroCis,
         price: 1.9,
         description: "",
         models: [
           {
-            text: "Laranja",
-            isEnable: true,
-          },
-          {
-            text: "Azul",
+            text: "Roxo",
             isEnable: true,
           },
           {
@@ -1597,11 +1654,19 @@ function App() {
             isEnable: true,
           },
           {
+            text: "Vermeho",
+            isEnable: true,
+          },
+          {
             text: "Verde",
             isEnable: true,
           },
           {
-            text: "Roxo",
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Cinza",
             isEnable: true,
           },
         ],
@@ -1609,7 +1674,7 @@ function App() {
       },
       {
         id: "84",
-        name: "Lapis West Village",
+        name: "Lapis West Village - Tilibra",
         type: "Lápis",
         image: lapisWestVillage,
         price: 2.2,
@@ -1618,15 +1683,15 @@ function App() {
       },
       {
         id: "85",
-        name: "Marca Texto Com Glitter",
+        name: "Marca Texto Com Glitter - Importado",
         type: "Marca Texto",
         image: marcaTextoComGlitter,
         price: 8,
         description: "",
         models: [
           {
-            text: "Vermelho",
-            isEnable: true,
+            text: "Rosa",
+            isEnable: false,
           },
           {
             text: "Laranja",
@@ -1642,14 +1707,14 @@ function App() {
           },
           {
             text: "Azul",
-            isEnable: true,
+            isEnable: false,
           },
         ],
         isInCatalog: false,
       },
       {
         id: "86",
-        name: "Marca Texto Em Gel",
+        name: "Marca Texto Em Gel Neon - BRW",
         type: "Marca Texto",
         image: marcaTextoEmGel,
         price: 6.2,
@@ -1672,7 +1737,7 @@ function App() {
       },
       {
         id: "87",
-        name: "Marca Texto Ponta Dupla",
+        name: "Marca Texto Ponta Dupla Neon - BRW",
         type: "Marca Texto",
         image: marcaTextoPontaDupla,
         price: 5,
@@ -1707,10 +1772,10 @@ function App() {
       },
       {
         id: "88",
-        name: "Marca Texto Ursinhos",
+        name: "Marca Texto Ursinhos - Importado",
         type: "Marca Texto",
         image: marcaTextoUrsinhos,
-        price: 2.2,
+        price: 4.15,
         description: "",
         models: [
           {
@@ -1742,10 +1807,10 @@ function App() {
       },
       {
         id: "89",
-        name: "Marca Texto Apagável",
+        name: "Marca Texto Apagável Tom Pastel - BRW",
         type: "Marca Texto",
         image: marcaTextoApagavel,
-        price: 4.15,
+        price: 9,
         description: "",
         models: [
           {
@@ -2044,6 +2109,20 @@ function App() {
         image: canetaGatinhos,
         price: 8.6,
         description: "",
+        models: [
+          {
+            text: "Amarelo",
+            isEnable: false,
+          },
+          {
+            text: "Rosa",
+            isEnable: false,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
@@ -2341,7 +2420,7 @@ function App() {
             isEnable: false,
           },
           {
-            text: "Ciano",
+            text: "Verde Ciano",
             isEnable: true,
           },
           {
@@ -2353,7 +2432,7 @@ function App() {
             isEnable: true,
           },
           {
-            text: "Laranja",
+            text: "Salmão",
             isEnable: true,
           },
           {
@@ -2381,7 +2460,7 @@ function App() {
           },
           {
             text: "Laranja",
-            isEnable: false,
+            isEnable: true,
           },
           {
             text: "Amarelo",
@@ -2394,6 +2473,95 @@ function App() {
           {
             text: "Azul",
             isEnable: false,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "113",
+        name: "Post-it Transparente - Importado",
+        type: "Post-it",
+        image: postitTransparente50,
+        price: 8,
+        description: "50 folhas, 76x76mm",
+        isInCatalog: false,
+      },
+      {
+        id: "114",
+        name: "Post-it Mini - Joccar Office",
+        type: "Post-it",
+        image: postitMiniJoccarOffice,
+        price: 3,
+        description: "100 folhas, 38x50mm",
+        isInCatalog: false,
+      },
+      {
+        id: "115",
+        name: "Post-it Marca Página - Importado",
+        type: "Post-it",
+        image: postitMarcaPagina,
+        price: 3,
+        description: "",
+        models: [
+          {
+            text: "Modelo 01",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 02",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 03",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 04",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 05",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 06",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "116",
+        name: "Cola Bastao 9g - BRW",
+        type: "Colas Bastão",
+        image: colaBastaoBRW9G,
+        price: 2.7,
+        description: "",
+        isInCatalog: false,
+      },
+      {
+        id: "117",
+        name: "Caneta Fofa 10 Cores - BRW",
+        type: "Canetas",
+        image: canetaFofa10CoresBRW,
+        price: 19,
+        description: "Caneta Esferográfica - ponta 0.7mm",
+        models: [
+          {
+            text: "Borboleta lilás",
+            isEnable: true,
+          },
+          {
+            text: "Borboleta Azul",
+            isEnable: true,
+          },
+          {
+            text: "Corpo Azul com Arco-íris",
+            isEnable: true,
+          },
+          {
+            text: "Corpo Rosa com Arco-íris",
+            isEnable: true,
           },
         ],
         isInCatalog: false,
