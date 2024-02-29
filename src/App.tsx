@@ -115,17 +115,25 @@ import grafiteTrasparenteStyleOriginal07 from "./assets/produtos/grafites/grafit
 import tesouraComunColoridaWinPaper from "./assets/produtos/tesouras/tesoura-comun-colorida-win-paper.webp";
 import tesouraDePicotar from "./assets/produtos/tesouras/tesoura-de-picotar.webp";
 import borrachaTurmaDaMonica from "./assets/produtos/borrachas/borracha-turma-da-monica.webp";
-
 import marcaTextoGoodVibesJoccarOffice from "./assets/produtos/marcaTexto/marca-texto-good-vibes-joccar-office.webp";
 import marcaTextoPastelJoccarOffice from "./assets/produtos/marcaTexto/marca-texto-pastel-joccar-office.webp";
-
 import postitTransparente50 from "./assets/produtos/postit/postit-transparente-50.webp";
 import postitMiniJoccarOffice from "./assets/produtos/postit/postit-mini-joccar-office.webp";
 import postitMarcaPagina from "./assets/produtos/postit/post-it-marca-pagina.webp";
-
 import colaBastaoBRW9G from "./assets/produtos/colasBastao/cola-bastao-brw-9g.webp";
-
 import canetaFofa10CoresBRW from "./assets/produtos/canetas/caneta-fofa-10-cores-brw.webp";
+import canetaCisCristal16MM from "./assets/produtos/canetas/caneta-cis-cristal-16-mm.webp";
+import canetaHidrograficaGraphPepsMaped04 from "./assets/produtos/canetas/caneta-hidrografica-graph-peps-maped.webp";
+import canetaSpiroCisColorida from "./assets/produtos/canetas/caneta-spiro-cis-colorida.webp";
+
+import borrachaMickeyMolin from "./assets/produtos/borrachas/borracha-mickey-molin.webp";
+import borrachaCapaPlasticaTomPastel from "./assets/produtos/borrachas/borracha-capa-plastica-tom-pastel.webp";
+import borrachaConjuntoCenoura from "./assets/produtos/borrachas/borracha-conjunto-cenouras.webp";
+import grampeadoresCaixaDeGrampo from "./assets/produtos/grampeadores/grampeador-caixa-de-grampos.webp";
+import grafitePontaDeGrafite05 from "./assets/produtos/grafites/grafite-ponta-de-grafite-05.webp";
+import grafitePontaDeGrafite07 from "./assets/produtos/grafites/grafite-ponta-de-grafite-07.webp";
+
+import corretivoCanetaCorretivaCis2ml from "./assets/produtos/corretivosFita/corretivo-caneta-cis-2ml.webp";
 
 import { FaRegCopy } from "react-icons/fa";
 
@@ -493,10 +501,10 @@ function App() {
       },
       {
         id: "21",
-        name: "Caneta Esferografica Brw",
+        name: "Caneta Esferografica - BRW",
         type: "Canetas",
         image: canetaEsferograficaBrw,
-        price: 9,
+        price: 6,
         description: "Caneta esferográfica, ponta fina, na escrita azul",
         models: [
           {
@@ -547,21 +555,46 @@ function App() {
       },
       {
         id: "23",
-        name: "Caneta Feras",
+        name: "Caneta Feras Chinesas",
         type: "Canetas",
         image: canetaFeras,
-        price: 9,
-        description:
-          "[item sortido] Caneta em gel, clicável e com a escrita na cor preta",
+        price: 5.8,
+        description: "Caneta em gel, clicável e com a escrita na cor preta",
+        models: [
+          {
+            text: "Modelo 1",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 2",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 3",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 4",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 5",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 6",
+            isEnable: true,
+          },
+        ],
         isInCatalog: false,
       },
       {
         id: "24",
-        name: "Caneta Games Apagável",
+        name: "Caneta Games Apagável - BRW",
         type: "Canetas",
         image: canetaGamesApagavel,
         price: 9,
-        description: "Caneta apagável, cor azul, brw",
+        description: "Caneta apagável, ponta fina, cor azul",
         models: [
           {
             text: "Controle",
@@ -594,7 +627,7 @@ function App() {
       // },
       {
         id: "27",
-        name: "Caneta Manga",
+        name: "Caneta Mangá - Hanako-kun",
         type: "Canetas",
         image: canetaManga,
         price: 9,
@@ -661,10 +694,10 @@ function App() {
       },
       {
         id: "30",
-        name: "Caneta Retro",
+        name: "Caneta Retrô",
         type: "Canetas",
         image: canetaRetro,
-        price: 9,
+        price: 5.8,
         description: "Caneta em gel, ponta fina e com a escrita na cor preta",
         models: [
           {
@@ -696,19 +729,20 @@ function App() {
       },
       {
         id: "31",
-        name: "Caneta Retro Ursos",
+        name: "Caneta Retrô Ursos",
         type: "Canetas",
         image: canetaRetroUrsos,
-        price: 9,
-        description: "Caneta em gel, ponta fina e com a escrita na cor preta",
+        price: 5.8,
+        description:
+          "[Toque a imagem para consultar os modelos] Caneta em gel, ponta fina e com a escrita na cor preta",
         models: [
           {
             text: "Modelo 1",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Modelo 2",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Modelo 3",
@@ -716,11 +750,11 @@ function App() {
           },
           {
             text: "Modelo 4",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Modelo 5",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Modelo 6",
@@ -784,106 +818,6 @@ function App() {
         isInCatalog: false,
       },
       {
-        id: "34",
-        name: "Caderno Harry Potter Listras das Casas",
-        type: "Cadernos",
-        image: cadernoHarryPotterListaCasas,
-        price: 49.9,
-        description:
-          "Caderno College, Capa Dura, 10 Matérias, 160 Folhas off white, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "35",
-        name: "Caderno Harry Potter Brasao das Casas",
-        type: "Cadernos",
-        image: cadernoHarryPotterBrasaoCasas,
-        price: 49.9,
-        description:
-          "Caderno College, Capa Dura, 10 Matérias, 160 Folhas off white, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "36",
-        name: "Caderno Joaninhas",
-        type: "Cadernos",
-        image: cadernoSemAdesivoJoaninhas,
-        price: 25,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, não possui adesivo",
-        isInCatalog: false,
-      },
-      {
-        id: "37",
-        name: "Caderno Cachorrinhos",
-        type: "Cadernos",
-        image: cadernoSemAdesivoCachorrinhos,
-        price: 25,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, não possui adesivo",
-        isInCatalog: false,
-      },
-      {
-        id: "38",
-        name: "Caderno Flores",
-        type: "Cadernos",
-        image: cadernoSemAdesivoFlores,
-        price: 25,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, não possui adesivo",
-        isInCatalog: false,
-      },
-      {
-        id: "39",
-        name: "Caderno Coracões Doce",
-        type: "Cadernos",
-        image: cadernoSemadesivocoracoesdoce,
-        price: 25,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, não possui adesivo",
-        isInCatalog: false,
-      },
-      {
-        id: "40",
-        name: "Caderno Frida Kahlo Vermelho",
-        type: "Cadernos",
-        image: cadernoFridaVermelho,
-        price: 45,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "41",
-        name: "Caderno Hard Work",
-        type: "Cadernos",
-        image: cadernoHardWork,
-        price: 35,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "42",
-        name: "Caderno Craftcolor Papelão",
-        type: "Cadernos",
-        image: cadernoCraftcolorPapelao,
-        price: 40,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas off white, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "43",
-        name: "Caderno Star Wars",
-        type: "Cadernos",
-        image: cadernoStarWars,
-        price: 38,
-        description:
-          "Caderno Universitário, Capa Dura, 1 Matérias, 80 Folhas, Culturama, possui adesivos",
-        isInCatalog: false,
-      },
-      {
         id: "44",
         name: "Caneta Xadrez",
         type: "Canetas",
@@ -921,7 +855,7 @@ function App() {
       },
       {
         id: "45",
-        name: "Borracha Capa Plastica Colorida",
+        name: "Borracha Capa Plastica Neon - BRW",
         type: "Borrachas",
         image: borrachaCapaPlasticaColorida,
         price: 2.4,
@@ -937,10 +871,10 @@ function App() {
           },
           {
             text: "Verde",
-            isEnable: true,
+            isEnable: false,
           },
           {
-            text: "Vermelho",
+            text: "Rosa",
             isEnable: true,
           },
         ],
@@ -955,7 +889,7 @@ function App() {
         description: "",
         models: [
           {
-            text: "Azul - Roxo",
+            text: "Azul - Lilás",
             isEnable: true,
           },
           {
@@ -971,7 +905,7 @@ function App() {
       },
       {
         id: "47",
-        name: "Borracha Foods",
+        name: "Borracha Foods - Leo&Leo",
         type: "Borrachas",
         image: borrachaFoods,
         price: 3.2,
@@ -986,7 +920,7 @@ function App() {
             isEnable: true,
           },
           {
-            text: "Biscoito",
+            text: "Rosquinha",
             isEnable: true,
           },
           {
@@ -998,7 +932,7 @@ function App() {
       },
       {
         id: "48",
-        name: "Borracha Vingadores",
+        name: "Borracha Vingadores - Molin",
         type: "Borrachas",
         image: borrachaVingadores,
         price: 4.5,
@@ -1025,7 +959,7 @@ function App() {
       },
       {
         id: "49",
-        name: "Borracha Ursinho Pool",
+        name: "Borracha Ursinho Pool - Leo&Leo",
         type: "Borrachas",
         image: borrachaPool,
         price: 2.9,
@@ -1047,176 +981,6 @@ function App() {
         isInCatalog: false,
       },
       {
-        id: "50",
-        name: "Caderno Disney Baby Yoda",
-        type: "Cadernos",
-        image: cadernoDisneyBabyYoda,
-        price: 41.9,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "51",
-        name: "Caderno Disney Cininho",
-        type: "Cadernos",
-        image: cadernoDisneyCininho,
-        price: 41.9,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "52",
-        name: "Caderno Disney Elza",
-        type: "Cadernos",
-        image: cadernoDisneyElza,
-        price: 41.9,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "53",
-        name: "Caderno Disney Olaf",
-        type: "Cadernos",
-        image: cadernoDisneyOlaf,
-        price: 41.9,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "54",
-        name: "Caderno Harry Potter Brasao Escolas",
-        type: "Cadernos",
-        image: cadernoHarryPotterBrasaoEscolas,
-        price: 39.9,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "55",
-        name: "Caderno Harry Potter Defesa Contra Artes Das Trevas",
-        type: "Cadernos",
-        image: cadernoHarryPotterDefesaContraArtesDasTrevas,
-        price: 39.9,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "56",
-        name: "Caderno House Of Dragon Brasao Do Dragao",
-        type: "Cadernos",
-        image: cadernoHouseOfDragonBrasaoDoDragao,
-        price: 41.2,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "57",
-        name: "Caderno House Of Dragon Dragao E Espada",
-        type: "Cadernos",
-        image: cadernoHouseOfDragonDragaoEEspada,
-        price: 41.2,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "58",
-        name: "Caderno House Of Dragon Fire Will Reign",
-        type: "Cadernos",
-        image: cadernoHouseOfDragonFireWillReign,
-        price: 41.2,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "59",
-        name: "Caderno House Of Dragon You Win Or You Die",
-        type: "Cadernos",
-        image: cadernoHouseOfDragonYouWinOrYouDie,
-        price: 41.2,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "60",
-        name: "Caderno Marmorizado Be Authentic",
-        type: "Cadernos",
-        image: cadernoMarbleBeAuthentic,
-        price: 35.9,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "61",
-        name: "Caderno Marmorizado Beautiful Be You",
-        type: "Cadernos",
-        image: cadernoMarbleBeautifulBeYou,
-        price: 35.9,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "62",
-        name: "Caderno Marmorizado Dream The Impossible",
-        type: "Cadernos",
-        image: cadernoMarbleDreamTheImpossible,
-        price: 35.9,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "63",
-        name: "Caderno Marmorizado Lovely Strong",
-        type: "Cadernos",
-        image: cadernoMarbleLovelyStrong,
-        price: 35.9,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "64",
-        name: "Caderno Rick And Morty Cabeca Do Morty",
-        type: "Cadernos",
-        image: cadernoRickAndMortyCabecaDoMorty,
-        price: 41.2,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "65",
-        name: "Caderno Rick And Morty Foco Na Ciencia",
-        type: "Cadernos",
-        image: cadernoRickAndMortyFocoNaCiencia,
-        price: 41.2,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
-        id: "66",
-        name: "Caderno Rick And Morty Portal Rick And Morty",
-        type: "Cadernos",
-        image: cadernoRickAndMortyPortalRickAndMorty,
-        price: 41.2,
-        description:
-          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
-        isInCatalog: false,
-      },
-      {
         id: "67",
         name: "Apontador Com Deposito Spiro Cis",
         type: "Apontadores",
@@ -1226,7 +990,7 @@ function App() {
         models: [
           {
             text: "Azul",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Cinza",
@@ -1253,7 +1017,7 @@ function App() {
       },
       {
         id: "68",
-        name: "Apontador Minnie",
+        name: "Apontador Minnie - Molin",
         type: "Apontadores",
         image: apontadorMinnie,
         price: 4.2,
@@ -1272,7 +1036,7 @@ function App() {
       },
       {
         id: "69",
-        name: "Apontador Soul Brw",
+        name: "Apontador com Depósito Soul - BRW",
         type: "Apontadores",
         image: apontadorSoulBrw,
         price: 3.15,
@@ -1299,7 +1063,7 @@ function App() {
       },
       {
         id: "70",
-        name: "Apontador Vingadores",
+        name: "Apontador Vingadores - Molin",
         type: "Apontadores",
         image: apontadorVingadores,
         price: 4.2,
@@ -1326,10 +1090,10 @@ function App() {
       },
       {
         id: "71",
-        name: "Borracha Quadra da Spiro Cis",
+        name: "Borracha Cis Spiro",
         type: "Borrachas",
         image: borrachaQuadraDaSpiroCis,
-        price: 4,
+        price: 3.5,
         description: "",
         models: [
           {
@@ -1342,7 +1106,7 @@ function App() {
           },
           {
             text: "Azul",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Ciano",
@@ -1448,11 +1212,11 @@ function App() {
       },
       {
         id: "76",
-        name: "Corretivo Caneta Brw 4ml",
-        type: "corretivos fita",
+        name: "Corretivo Caneta - BRW",
+        type: "Corretivos",
         image: corretivoCanetaBrw4g,
         price: 5,
-        description: "",
+        description: "contém 4ml",
         models: [
           {
             text: "Azul",
@@ -1476,13 +1240,13 @@ function App() {
       {
         id: "77",
         name: "Corretivo Fita Neon Transparente",
-        type: "corretivos fita",
+        type: "Corretivos",
         image: corretivoFitaNeonTransparente,
         price: 5.5,
         description: "",
         models: [
           {
-            text: "Rosa",
+            text: "Lilás",
             isEnable: true,
           },
           {
@@ -1506,8 +1270,8 @@ function App() {
       },
       {
         id: "78",
-        name: "Corretivo Fita Pastel Solido",
-        type: "corretivos fita",
+        name: "Corretivo Fita Tom Pastel",
+        type: "Corretivos",
         image: corretivoFitaPastelSolido,
         price: 6.2,
         description: "",
@@ -1517,7 +1281,7 @@ function App() {
             isEnable: true,
           },
           {
-            text: "Nude",
+            text: "Bege",
             isEnable: true,
           },
           {
@@ -1532,24 +1296,28 @@ function App() {
             text: "Azul",
             isEnable: true,
           },
+          {
+            text: "Nude",
+            isEnable: true,
+          },
         ],
         isInCatalog: false,
       },
       {
         id: "79",
-        name: "Corretivo Fita Pastel Transparente 12m",
-        type: "corretivos fita",
+        name: "Corretivo Fita Pastel Transparente - Importado",
+        type: "Corretivos",
         image: corretivoFitaPastelTransparente12m,
         price: 9,
-        description: "",
+        description: "Tamanho 12m",
         models: [
           {
-            text: "Branco",
+            text: "Beje",
             isEnable: true,
           },
           {
             text: "Lavanda",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Verde",
@@ -1565,7 +1333,7 @@ function App() {
           },
           {
             text: "Azul",
-            isEnable: true,
+            isEnable: false,
           },
         ],
         isInCatalog: false,
@@ -1624,7 +1392,7 @@ function App() {
           },
           {
             text: "Verde",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Azul",
@@ -1834,7 +1602,7 @@ function App() {
       },
       {
         id: "90",
-        name: "Caneta Apagavel Astronautas",
+        name: "Caneta Apagável Astronautas",
         type: "Canetas",
         image: canetaApagavelAstronautas,
         price: 6.0,
@@ -1884,10 +1652,10 @@ function App() {
       },
       {
         id: "92",
-        name: "Caneta Apagavel Coracao E Pompom",
+        name: "Caneta Apagável Coração e Pompom - BRW",
         type: "Canetas",
         image: canetaApagavelCoracaoEPompom,
-        price: 1.0,
+        price: 12.0,
         description: "",
         models: [
           {
@@ -1903,10 +1671,10 @@ function App() {
       },
       {
         id: "93",
-        name: "Caneta Apagavel Criaturas Do Mar",
+        name: "Caneta Apagável Criaturas do Mar",
         type: "Canetas",
         image: canetaApagavelCriaturasDoMar,
-        price: 1.0,
+        price: 9.0,
         description: "",
         models: [
           {
@@ -1930,7 +1698,7 @@ function App() {
       },
       {
         id: "94",
-        name: "Caneta Apagavel Pandas",
+        name: "Caneta Apagável Fofa Coelhinhos",
         type: "Canetas",
         image: canetaApagavelPandas,
         price: 6.0,
@@ -1957,7 +1725,7 @@ function App() {
         type: "Canetas",
         image: canetaCisScript,
         price: 2.5,
-        description: "",
+        description: "ponta 0.7mm",
         models: [
           {
             text: "Azul",
@@ -1976,7 +1744,7 @@ function App() {
       },
       {
         id: "96",
-        name: "Caneta Esferografica Cis Lolipop",
+        name: "Caneta Esferográfica Cis Lollipop",
         type: "Canetas",
         image: canetaEsferograficaCisLolipop,
         price: 2.2,
@@ -1984,7 +1752,7 @@ function App() {
         models: [
           {
             text: "Azul claro",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Azul Escuro",
@@ -1992,7 +1760,7 @@ function App() {
           },
           {
             text: "Vermelho",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Rosa",
@@ -2011,19 +1779,19 @@ function App() {
       },
       {
         id: "97",
-        name: "Caneta Esferografica Cis Minus 04",
+        name: "Caneta Esferográfica Cis Minus",
         type: "Canetas",
         image: canetaEsferograficaCisMinus04,
         price: 3.3,
-        description: "",
+        description: "Ponta 0.4mm",
         models: [
           {
-            text: "Laranja",
+            text: "Vermelho",
             isEnable: true,
           },
           {
             text: "Roxo",
-            isEnable: false,
+            isEnable: true,
           },
           {
             text: "Rosa",
@@ -2035,14 +1803,14 @@ function App() {
           },
           {
             text: "Azul Claro",
-            isEnable: true,
+            isEnable: false,
           },
         ],
         isInCatalog: false,
       },
       {
         id: "98",
-        name: "Caneta Esferografica Clicacel Super Colorida",
+        name: "Caneta Esferográfica Clicável Super Colorida",
         type: "Canetas",
         image: canetaEsferograficaClicacelSuperColorida,
         price: 3.0,
@@ -2073,7 +1841,7 @@ function App() {
       },
       {
         id: "99",
-        name: "Caneta Esferografica Colorida",
+        name: "Caneta Esferográfica Clicável Colorida",
         type: "Canetas",
         image: canetaEsferograficaColorida,
         price: 3.0,
@@ -2127,11 +1895,11 @@ function App() {
       },
       {
         id: "101",
-        name: "Caneta Spiro Cis",
+        name: "Caneta Cis Spiro",
         type: "Canetas",
         image: canetaSpiroCis,
         price: 4.0,
-        description: "",
+        description: "Ponta 0.7mm",
         models: [
           {
             text: "Azul",
@@ -2146,7 +1914,7 @@ function App() {
       },
       {
         id: "102",
-        name: "Apontador Rapitores",
+        name: "Apontador Rapitores - BRW",
         type: "Apontadores",
         image: apontadorRapitores,
         price: 11.9,
@@ -2158,7 +1926,7 @@ function App() {
           },
           {
             text: "Verde",
-            isEnable: true,
+            isEnable: false,
           },
           {
             text: "Lilás",
@@ -2166,18 +1934,18 @@ function App() {
           },
           {
             text: "Azul",
-            isEnable: false,
+            isEnable: true,
           },
         ],
         isInCatalog: false,
       },
       {
         id: "103",
-        name: "Grafite Animais Fofos - ponta 0.7",
+        name: "Grafite Animais Fofos",
         type: "Grafites",
         image: grafiteAnimaisFofos07,
         price: 7,
-        description: "",
+        description: "ponta 0.7mm",
         models: [
           {
             text: "Azul",
@@ -2200,11 +1968,11 @@ function App() {
       },
       {
         id: "104",
-        name: "Grafite Lapiseira Troca Ponta Brw",
+        name: "Grafite Lapiseira Troca Ponta - BRW",
         type: "Grafites",
         image: grafiteLapiseiraTrocaPontaBrw,
         price: 4.5,
-        description: "",
+        description: "ponta 1.6mm",
         models: [
           {
             text: "Verde",
@@ -2227,11 +1995,11 @@ function App() {
       },
       {
         id: "105",
-        name: "Grafite Tons Leves - ponta 0.5",
+        name: "Grafite Tom Pastel",
         type: "Grafites",
         image: grafiteTonsLeves05,
         price: 5.2,
-        description: "",
+        description: "ponta 0.5mm",
         models: [
           {
             text: "Verde",
@@ -2254,11 +2022,11 @@ function App() {
       },
       {
         id: "106",
-        name: "Grafite Tom Pastel - ponta 0.7",
+        name: "Grafite Tom Pastel",
         type: "Grafites",
         image: grafiteTonsLeves07,
         price: 6,
-        description: "",
+        description: "ponta 0.7mm",
         models: [
           {
             text: "Rosa",
@@ -2289,11 +2057,11 @@ function App() {
       },
       {
         id: "107",
-        name: "Grafite Trasparente Style Original - ponta 0.7",
+        name: "Grafite Trasparente - Style Original",
         type: "Grafites",
         image: grafiteTrasparenteStyleOriginal07,
         price: 6.5,
-        description: "",
+        description: "ponta 0.7mm",
         models: [
           {
             text: "Branco",
@@ -2316,7 +2084,7 @@ function App() {
       },
       {
         id: "108",
-        name: "Tesoura Comun Colorida Win Paper",
+        name: "Tesoura Tradicional - Win Paper",
         type: "Tesouras",
         image: tesouraComunColoridaWinPaper,
         price: 6,
@@ -2339,7 +2107,7 @@ function App() {
       },
       {
         id: "109",
-        name: "Tesoura De Picotar",
+        name: "Tesoura de Picotar",
         type: "Tesouras",
         image: tesouraDePicotar,
         price: 8.5,
@@ -2374,7 +2142,7 @@ function App() {
       },
       {
         id: "110",
-        name: "Borracha Turma Da Monica",
+        name: "Borracha Turma Da Mônica",
         type: "Borrachas",
         image: borrachaTurmaDaMonica,
         price: 2.5,
@@ -2564,6 +2332,495 @@ function App() {
             isEnable: true,
           },
         ],
+        isInCatalog: false,
+      },
+      {
+        id: "118",
+        name: "Caneta Cis Cristal",
+        type: "Canetas",
+        image: canetaCisCristal16MM,
+        price: 2.5,
+        description: "ponta 1.6mm",
+        isInCatalog: false,
+      },
+      {
+        id: "119",
+        name: "Caneta Hidrografica Graph' Peps - Maped",
+        type: "Canetas",
+        image: canetaHidrograficaGraphPepsMaped04,
+        price: 5,
+        description: "",
+        models: [
+          {
+            text: "Preto",
+            isEnable: true,
+          },
+          {
+            text: "Azul Escuro",
+            isEnable: false,
+          },
+          {
+            text: "Verde Escuro",
+            isEnable: true,
+          },
+          {
+            text: "Vermelho",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: false,
+          },
+          {
+            text: "Laranja",
+            isEnable: false,
+          },
+          {
+            text: "Verde Claro",
+            isEnable: true,
+          },
+          {
+            text: "Azul Claro",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "120",
+        name: "Caneta Spiro Cis Colorida",
+        type: "Canetas",
+        image: canetaSpiroCisColorida,
+        price: 3.2,
+        description: "",
+        models: [
+          {
+            text: "Azul Claro",
+            isEnable: true,
+          },
+          {
+            text: "Azul Escuro",
+            isEnable: false,
+          },
+          {
+            text: "Laranja",
+            isEnable: true,
+          },
+          {
+            text: "Vermelho",
+            isEnable: false,
+          },
+          {
+            text: "Verde",
+            isEnable: false,
+          },
+          {
+            text: "Rosa",
+            isEnable: false,
+          },
+          {
+            text: "Roxo",
+            isEnable: false,
+          },
+          {
+            text: "Preto",
+            isEnable: false,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "121",
+        name: "Borracha Mickey - Molin",
+        type: "Borrachas",
+        image: borrachaMickeyMolin,
+        price: 4.5,
+        description: "",
+        models: [
+          {
+            text: "Modelo 1",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 2",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 3",
+            isEnable: true,
+          },
+          {
+            text: "Modelo 4",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "122",
+        name: "Borracha Capa Plastica Tom Pastel - BRW",
+        type: "Borrachas",
+        image: borrachaCapaPlasticaTomPastel,
+        price: 2.5,
+        description: "",
+        models: [
+          {
+            text: "Lilás",
+            isEnable: true,
+          },
+          {
+            text: "Verde",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "123",
+        name: "Conjunto de Borrachas Cenoura Fofa",
+        type: "Borrachas",
+        image: borrachaConjuntoCenoura,
+        price: 9,
+        description: "",
+        isInCatalog: false,
+      },
+      {
+        id: "124",
+        name: "Caixa de Grampos Coloridos - BRW",
+        type: "Grampeadores",
+        image: grampeadoresCaixaDeGrampo,
+        price: 8,
+        description: "Contem 1000 unidades - Tamanho dos grampos: 26/6 e 26/4",
+        models: [
+          {
+            text: "Lilás",
+            isEnable: true,
+          },
+          {
+            text: "Azul",
+            isEnable: false,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "125",
+        name: "Ponta de Grafite 0.5mm",
+        type: "Grafites",
+        image: grafitePontaDeGrafite05,
+        price: 2.5,
+        description: "",
+        isInCatalog: false,
+      },
+      {
+        id: "126",
+        name: "Ponta de Grafite 0.7mm",
+        type: "Grafites",
+        image: grafitePontaDeGrafite07,
+        price: 2.5,
+        description: "",
+        isInCatalog: false,
+      },
+      //Contagem Certa - Verdadeira Contagem - Contagem Correta
+      {
+        id: "126",
+        name: "Caneta Coretiva Cis",
+        type: "Corretivos",
+        image: corretivoCanetaCorretivaCis2ml,
+        price: 4.2,
+        description: "contém 2ml",
+        models: [
+          {
+            text: "Azul",
+            isEnable: true,
+          },
+          {
+            text: "Rosa",
+            isEnable: true,
+          },
+        ],
+        isInCatalog: false,
+      },
+      {
+        id: "34",
+        name: "Caderno Harry Potter Listras das Casas",
+        type: "Cadernos",
+        image: cadernoHarryPotterListaCasas,
+        price: 49.9,
+        description:
+          "Caderno College, Capa Dura, 10 Matérias, 160 Folhas off white, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "35",
+        name: "Caderno Harry Potter Brasao das Casas",
+        type: "Cadernos",
+        image: cadernoHarryPotterBrasaoCasas,
+        price: 49.9,
+        description:
+          "Caderno College, Capa Dura, 10 Matérias, 160 Folhas off white, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "36",
+        name: "Caderno Joaninhas",
+        type: "Cadernos",
+        image: cadernoSemAdesivoJoaninhas,
+        price: 25,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, não possui adesivo",
+        isInCatalog: false,
+      },
+      {
+        id: "37",
+        name: "Caderno Cachorrinhos",
+        type: "Cadernos",
+        image: cadernoSemAdesivoCachorrinhos,
+        price: 25,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, não possui adesivo",
+        isInCatalog: false,
+      },
+      {
+        id: "38",
+        name: "Caderno Flores",
+        type: "Cadernos",
+        image: cadernoSemAdesivoFlores,
+        price: 25,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, não possui adesivo",
+        isInCatalog: false,
+      },
+      {
+        id: "39",
+        name: "Caderno Coracões Doce",
+        type: "Cadernos",
+        image: cadernoSemadesivocoracoesdoce,
+        price: 25,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, não possui adesivo",
+        isInCatalog: false,
+      },
+      {
+        id: "40",
+        name: "Caderno Frida Kahlo Vermelho",
+        type: "Cadernos",
+        image: cadernoFridaVermelho,
+        price: 45,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "41",
+        name: "Caderno Hard Work",
+        type: "Cadernos",
+        image: cadernoHardWork,
+        price: 35,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "42",
+        name: "Caderno Craftcolor Papelão",
+        type: "Cadernos",
+        image: cadernoCraftcolorPapelao,
+        price: 40,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas off white, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "43",
+        name: "Caderno Star Wars",
+        type: "Cadernos",
+        image: cadernoStarWars,
+        price: 38,
+        description:
+          "Caderno Universitário, Capa Dura, 1 Matérias, 80 Folhas, Culturama, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "50",
+        name: "Caderno Disney Baby Yoda",
+        type: "Cadernos",
+        image: cadernoDisneyBabyYoda,
+        price: 41.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "51",
+        name: "Caderno Disney Cininho",
+        type: "Cadernos",
+        image: cadernoDisneyCininho,
+        price: 41.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "52",
+        name: "Caderno Disney Elza",
+        type: "Cadernos",
+        image: cadernoDisneyElza,
+        price: 41.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "53",
+        name: "Caderno Disney Olaf",
+        type: "Cadernos",
+        image: cadernoDisneyOlaf,
+        price: 41.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "54",
+        name: "Caderno Harry Potter Brasao Escolas",
+        type: "Cadernos",
+        image: cadernoHarryPotterBrasaoEscolas,
+        price: 39.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "55",
+        name: "Caderno Harry Potter Defesa Contra Artes Das Trevas",
+        type: "Cadernos",
+        image: cadernoHarryPotterDefesaContraArtesDasTrevas,
+        price: 39.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "56",
+        name: "Caderno House Of Dragon Brasao Do Dragao",
+        type: "Cadernos",
+        image: cadernoHouseOfDragonBrasaoDoDragao,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "57",
+        name: "Caderno House Of Dragon Dragao E Espada",
+        type: "Cadernos",
+        image: cadernoHouseOfDragonDragaoEEspada,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "58",
+        name: "Caderno House Of Dragon Fire Will Reign",
+        type: "Cadernos",
+        image: cadernoHouseOfDragonFireWillReign,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "59",
+        name: "Caderno House Of Dragon You Win Or You Die",
+        type: "Cadernos",
+        image: cadernoHouseOfDragonYouWinOrYouDie,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "60",
+        name: "Caderno Marmorizado Be Authentic",
+        type: "Cadernos",
+        image: cadernoMarbleBeAuthentic,
+        price: 35.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "61",
+        name: "Caderno Marmorizado Beautiful Be You",
+        type: "Cadernos",
+        image: cadernoMarbleBeautifulBeYou,
+        price: 35.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "62",
+        name: "Caderno Marmorizado Dream The Impossible",
+        type: "Cadernos",
+        image: cadernoMarbleDreamTheImpossible,
+        price: 35.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "63",
+        name: "Caderno Marmorizado Lovely Strong",
+        type: "Cadernos",
+        image: cadernoMarbleLovelyStrong,
+        price: 35.9,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "64",
+        name: "Caderno Rick And Morty Cabeca Do Morty",
+        type: "Cadernos",
+        image: cadernoRickAndMortyCabecaDoMorty,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "65",
+        name: "Caderno Rick And Morty Foco Na Ciencia",
+        type: "Cadernos",
+        image: cadernoRickAndMortyFocoNaCiencia,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
+        isInCatalog: false,
+      },
+      {
+        id: "66",
+        name: "Caderno Rick And Morty Portal Rick And Morty",
+        type: "Cadernos",
+        image: cadernoRickAndMortyPortalRickAndMorty,
+        price: 41.2,
+        description:
+          "Caderno Universitário, Capa Dura, 10 Matérias, 160 Folhas, possui adesivos",
         isInCatalog: false,
       },
     ]);
